@@ -43,8 +43,6 @@ export default function Home({ allPostsData }) {
               className={heroStyles.img}
               src="/images/profile.jpg"
               alt="Headshot of Joseph Lynn"
-              height={144}
-              width={144}
             />
           </div>
         </div>
