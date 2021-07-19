@@ -50,3 +50,14 @@
 .lightText {
   color: #666;
 }
+
+.section {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 2rem 4rem;
+  margin: 0 auto;
+}

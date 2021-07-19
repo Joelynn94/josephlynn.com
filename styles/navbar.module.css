@@ -1,0 +1,27 @@
+.nav {
+  background-color: var(--color-bg-light);
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-5) 0;
+  gap: var(--spacing-5);
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding: var(--spacing-5) var(--spacing-16);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .logo {
+    justify-self: start;
+  }
+
+  .container .site__links {
+    justify-self: end;
+  }
+}
