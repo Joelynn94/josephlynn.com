@@ -1,6 +1,11 @@
 import { parseISO, format } from "date-fns";
+import postStyles from "../styles/post.module.css";
 
 export default function Date({ dateString }) {
   const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, "LLLL d, yyyy")}</time>;
+  return (
+    <time className={postStyles.time} dateTime={dateString}>
+      {format(date, "LLLL d, yyyy")}
+    </time>
+  );
 }

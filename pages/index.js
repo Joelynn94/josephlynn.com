@@ -3,12 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 import config from "../lib/config";
-import Date from "../components/date";
+import { getSortedPostsData } from "../lib/posts";
 import Layout, { siteTitle } from "../components/layout";
 import UserLinks from "../components/userlinks";
+import Post from "../components/post";
 import heroStyles from "../styles/hero.module.css";
 import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -50,16 +50,8 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.section}`}>
         <h2>Blog</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
+          {allPostsData.map((post) => (
+            <Post key={post.id} post={post} />
           ))}
         </ul>
       </section>

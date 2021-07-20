@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--color-bg-light);
+  color: var(--color-accent);
+  border-radius: 6px;
+  padding: var(--spacing-1);
+  text-decoration: none;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.badge button {
+  background-color: var(--color-bg-light);
+  color: var(--color-accent);
+  border: none;
+  cursor: pointer;
+}
