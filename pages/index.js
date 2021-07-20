@@ -9,6 +9,7 @@ import UserLinks from "../components/userlinks";
 import Post from "../components/post";
 import heroStyles from "../styles/hero.module.css";
 import utilStyles from "../styles/utils.module.css";
+import Button from "../components/button";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -48,12 +49,20 @@ export default function Home({ allPostsData }) {
         </div>
       </section>
       <section className={`${utilStyles.section}`}>
-        <h2>Blog</h2>
+        <h2 className={utilStyles.title}>
+          Latest Post.
+          <Link href="/blog">
+            <Button buttonStyle="btn--secondary">View All</Button>
+          </Link>
+        </h2>
         <ul className={utilStyles.list}>
           {allPostsData.map((post) => (
             <Post key={post.id} post={post} />
           ))}
         </ul>
+      </section>
+      <section>
+        <h2></h2>
       </section>
     </Layout>
   );

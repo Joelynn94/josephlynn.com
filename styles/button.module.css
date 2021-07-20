@@ -1,0 +1,78 @@
+.btn {
+  cursor: pointer;
+  padding: 0px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  transition: background 0.4s ease;
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.text {
+  padding: 10px 20px;
+}
+
+.square {
+  padding: 8px;
+}
+
+/* CUSTOM BUTTON STYLES */
+
+.btn--default {
+  background-color: var(--color-bg-dark);
+  color: var(--color-bg-secondary-button);
+}
+
+.btn--default:hover {
+  background-color: var(--color-bg-dark);
+  border: 2px solid var(--color-bg-dark);
+  color: var(--dark);
+}
+
+.btn--primary {
+  background-color: transparent;
+  border: 2px solid var(--color-bg-button);
+  color: var(--color-main-text);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-bg-button);
+  color: var(--color-main-text);
+}
+
+.btn--primary a {
+  text-decoration: none;
+  color: var(--color-main-text);
+}
+
+.btn--primary .btn__square {
+  background-color: var(--color-bg-button);
+  border: 2px solid var(--color-bg-button);
+}
+
+.btn--secondary {
+  background-color: var(--color-bg-secondary-button);
+  border: 2px solid var(--color-bg-secondary-button);
+  color: var(--color-dark-text);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-bg-secondary-hover);
+}
+
+.btn--secondary a {
+  text-decoration: none;
+  color: var(--color-dark-text);
+}
+
+.btn--secondary .square {
+  background-color: var(--color-bg-secondary-button);
+  border: 2px solid var(--color-bg-secondary-button);
+}
