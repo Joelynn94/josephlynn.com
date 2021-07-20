@@ -15,11 +15,11 @@ const arrowsRight = (
 );
 
 const STYLES = [
-  "btn--default",
-  "btn--primary",
-  "btn--secondary",
-  "btn--danger",
-  "btn--success",
+  `${buttonStyles.default}`,
+  `${buttonStyles.primary}`,
+  `${buttonStyles.secondary}`,
+  `${buttonStyles.danger}`,
+  `${buttonStyles.success}`,
 ];
 
 const Button = ({

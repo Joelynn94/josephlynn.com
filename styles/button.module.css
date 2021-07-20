@@ -3,7 +3,7 @@
   padding: 0px;
   border: 2px solid transparent;
   transition: transform 0.3s ease;
-  font-size: 1rem;
+  font-size: var(--fontSize-1);
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -25,54 +25,54 @@
 
 /* CUSTOM BUTTON STYLES */
 
-.btn--default {
+.default {
   background-color: var(--color-bg-dark);
   color: var(--color-bg-secondary-button);
 }
 
-.btn--default:hover {
+.default:hover {
   background-color: var(--color-bg-dark);
   border: 2px solid var(--color-bg-dark);
   color: var(--dark);
 }
 
-.btn--primary {
+.primary {
   background-color: transparent;
   border: 2px solid var(--color-bg-button);
   color: var(--color-main-text);
 }
 
-.btn--primary:hover {
+.primary:hover {
   background-color: var(--color-bg-button);
   color: var(--color-main-text);
 }
 
-.btn--primary a {
+.primary a {
   text-decoration: none;
   color: var(--color-main-text);
 }
 
-.btn--primary .btn__square {
+.primary .square {
   background-color: var(--color-bg-button);
   border: 2px solid var(--color-bg-button);
 }
 
-.btn--secondary {
+.secondary {
   background-color: var(--color-bg-secondary-button);
   border: 2px solid var(--color-bg-secondary-button);
   color: var(--color-dark-text);
 }
 
-.btn--secondary:hover {
+.secondary:hover {
   background-color: var(--color-bg-secondary-hover);
 }
 
-.btn--secondary a {
+.secondary a {
   text-decoration: none;
   color: var(--color-dark-text);
 }
 
-.btn--secondary .square {
+.secondary .square {
   background-color: var(--color-bg-secondary-button);
   border: 2px solid var(--color-bg-secondary-button);
 }

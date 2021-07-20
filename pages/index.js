@@ -7,9 +7,11 @@ import { getSortedPostsData } from "../lib/posts";
 import Layout, { siteTitle } from "../components/layout";
 import UserLinks from "../components/userlinks";
 import Post from "../components/post";
+import Button from "../components/button";
+import Badge from "../components/badge";
+import buttonStyles from "../styles/button.module.css";
 import heroStyles from "../styles/hero.module.css";
 import utilStyles from "../styles/utils.module.css";
-import Button from "../components/button";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -48,11 +50,11 @@ export default function Home({ allPostsData }) {
           </div>
         </div>
       </section>
-      <section className={`${utilStyles.section}`}>
+      <section className={utilStyles.section}>
         <h2 className={utilStyles.title}>
-          Latest Post.
+          Latest Posts.
           <Link href="/blog">
-            <Button buttonStyle="btn--secondary">View All</Button>
+            <Button buttonStyle={buttonStyles.secondary}>View All</Button>
           </Link>
         </h2>
         <ul className={utilStyles.list}>
@@ -61,8 +63,19 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-      <section>
-        <h2></h2>
+      <section className={utilStyles.section}>
+        <h2 className={utilStyles.title}>
+          Projects.
+          <Link href="/projects">
+            <Button buttonStyle={buttonStyles.secondary}>View All</Button>
+          </Link>
+        </h2>
+      </section>
+      <section className={utilStyles.section}>
+        <h2 className={utilStyles.title}>
+          Contact.
+          <Badge>Status: Hireable</Badge>
+        </h2>
       </section>
     </Layout>
   );
