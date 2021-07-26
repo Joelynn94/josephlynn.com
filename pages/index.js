@@ -9,6 +9,7 @@ import UserLinks from "../components/userlinks";
 import Post from "../components/post";
 import Button from "../components/button";
 import Badge from "../components/badge";
+import Project from "../components/project";
 import buttonStyles from "../styles/button.module.css";
 import heroStyles from "../styles/hero.module.css";
 import utilStyles from "../styles/utils.module.css";
@@ -24,7 +25,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -74,6 +75,12 @@ export default function Home({ allPostsData }) {
             </a>
           </Link>
         </h2>
+        <div className="project-grid">
+          <Project />
+          <Project />
+          <Project />
+          <Project />
+        </div>
       </section>
       <section className={utilStyles.section}>
         <h2 className={utilStyles.title}>

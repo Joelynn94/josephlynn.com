@@ -4,7 +4,6 @@ import Link from "next/link";
 import config from "../lib/config";
 import Navbar from "./navbar";
 import styles from "../styles/layout.module.css";
-import utilStyles from "../styles/utils.module.css";
 
 const name = "Joseph Lynn";
 export const siteTitle = "Next.js Sample Website";
