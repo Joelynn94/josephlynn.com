@@ -6,7 +6,7 @@ import postStyles from "../styles/post.module.css";
 const Post = ({ post }) => {
   return (
     <article className={postStyles.article} key={post.title}>
-      <Link className={postStyles.link} href={`/posts/${post.id}`}>
+      <Link href={`/posts/${post.id}`} className={postStyles.link}>
         <a>
           <h3>{post.title}</h3>
         </a>

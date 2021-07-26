@@ -54,7 +54,9 @@ export default function Home({ allPostsData }) {
         <h2 className={utilStyles.title}>
           Latest Posts.
           <Link href="/blog">
-            <Button buttonStyle={buttonStyles.secondary}>View All</Button>
+            <a>
+              <Button buttonStyle={buttonStyles.secondary}>View All</Button>
+            </a>
           </Link>
         </h2>
         <ul className={utilStyles.list}>
@@ -67,7 +69,9 @@ export default function Home({ allPostsData }) {
         <h2 className={utilStyles.title}>
           Projects.
           <Link href="/projects">
-            <Button buttonStyle={buttonStyles.secondary}>View All</Button>
+            <a>
+              <Button buttonStyle={buttonStyles.secondary}>View All</Button>
+            </a>
           </Link>
         </h2>
       </section>

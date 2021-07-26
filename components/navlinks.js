@@ -8,7 +8,7 @@ const NavLinks = ({ config }) => {
     <ul className={navlinksStyles.links}>
       {siteLinks &&
         siteLinks.map((link) => (
-          <Link className={navlinksStyles.link} href={link.url} key={link.url}>
+          <Link href={link.url} key={link.url} className={navlinksStyles.link}>
             <a className={navlinksStyles.link}>{link.label}</a>
           </Link>
         ))}
