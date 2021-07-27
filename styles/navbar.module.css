@@ -18,7 +18,7 @@
   }
 
   .logo {
-    justify-self: start;
+    justify-self: flex-start;
   }
 
   .container .site__links {

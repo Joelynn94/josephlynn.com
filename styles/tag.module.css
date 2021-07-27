@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: var(--spacing-1);
 }
 
 .badge {
@@ -12,7 +14,6 @@
   padding: var(--spacing-1);
   text-decoration: none;
   margin-right: 5px;
-  margin-top: 5px;
 }
 
 .badge button {
@@ -20,4 +21,6 @@
   color: var(--color-accent);
   border: none;
   cursor: pointer;
+  text-transform: uppercase;
+  font-size: (--fontSize-0);
 }

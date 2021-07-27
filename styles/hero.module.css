@@ -16,7 +16,7 @@
 
 .user__links {
   margin-top: 10px;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .headshot {

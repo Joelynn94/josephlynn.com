@@ -9,7 +9,9 @@ function PostTags({ tags }) {
         tags.map((tag) => (
           <Link href={`/tags/${tag}`} key={tag} className={tagStyles.badge}>
             <a>
-              <button type="button">#{tag}</button>
+              <button type="button" className="uppercase text-sm">
+                {tag}
+              </button>
             </a>
           </Link>
         ))}
