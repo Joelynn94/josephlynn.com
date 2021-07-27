@@ -1,0 +1,19 @@
+.wrapper {
+  @apply bg-secondary-100;
+}
+
+.container {
+  @apply grid justify-items-center max-w-screen-lg m-auto pt-5 pb-5 gap-5 lg:px-16 lg:grid-cols-3;
+}
+
+.logo {
+  @apply lg:justify-self-start;
+}
+
+.links {
+  @apply flex lg:justify-self-start justify-items-center;
+}
+
+.social {
+  @apply lg:justify-self-end;
+}
