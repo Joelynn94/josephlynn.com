@@ -1,11 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import config from "../lib/config";
 import Navbar from "./navbar";
 import styles from "../styles/layout.module.css";
 
-const name = "Joseph Lynn";
 export const siteTitle = "Next.js Sample Website";
 
 const Layout = ({ children, home }) => {

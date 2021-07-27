@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import Badge from "./badge";
 import tagStyles from "../styles/tag.module.css";
 
