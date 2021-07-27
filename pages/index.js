@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 
 import config from "../lib/config";
 import { getSortedPostsData } from "../lib/posts";
@@ -36,8 +35,8 @@ export default function Home({ allPostsData }) {
             <h1 className={heroStyles.heading}>I'm Joseph Lynn</h1>
             <h2 className={heroStyles.subheading}>Frontend Web Developer</h2>
             <p className={heroStyles.blurb}>
-              Web developer based in Tampa, Florida who enjoys building web
-              applications with a great user experience. You can view my
+              Web developer based in Tampa, Florida. I enjoy building web
+              applications that have a great user experience. You can view my
               projects on GitHub, professional profile on LinkedIn, or download
               my resume.
             </p>
