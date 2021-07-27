@@ -46,7 +46,7 @@ const Form = () => {
           type="text"
           name="message"
           id="message"
-          className={formStyles.input}
+          className={`${formStyles.input} ${formStyles.textarea}`}
         />
       </div>
 

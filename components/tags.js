@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import Badge from "./badge";
 import tagStyles from "../styles/tag.module.css";
 
 function PostTags({ tags }) {
@@ -7,11 +8,9 @@ function PostTags({ tags }) {
     <div className={tagStyles.container}>
       {tags &&
         tags.map((tag) => (
-          <Link href={`/tags/${tag}`} key={tag} className={tagStyles.badge}>
+          <Link href={`/tags/${tag}`} key={tag}>
             <a>
-              <button type="button" className="uppercase text-sm">
-                {tag}
-              </button>
+              <Badge>{tag}</Badge>
             </a>
           </Link>
         ))}

@@ -2,10 +2,14 @@
   @apply max-w-md md:max-w-3xl lg:w-full xl:max-w-6xl m-auto;
 }
 
+.control {
+  @apply mt-4;
+}
+
 .input {
   @apply mt-1 p-3 focus:ring-primary-100 focus:border-primary-100 block w-full border-primary-100 rounded-md bg-secondary-100;
 }
 
-.control {
-  @apply mt-4;
+.textarea {
+  @apply resize-none h-40;
 }
