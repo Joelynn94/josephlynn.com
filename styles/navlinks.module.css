@@ -1,14 +1,7 @@
 .links {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @apply p-0 m-0 flex justify-center items-center lg:justify-self-end;
 }
 
 .link {
-  text-decoration: none;
-  color: #fafafa;
-  padding: 10px;
+  @apply p-3 text-coolGray-50;
 }

@@ -1,27 +1,11 @@
 .nav {
-  background-color: var(--color-bg-light);
+  @apply bg-secondary-100;
 }
 
 .container {
-  display: grid;
-  justify-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: var(--spacing-5) 0;
-  gap: var(--spacing-5);
+  @apply grid justify-items-center max-w-screen-lg m-auto pt-5 pb-5 gap-5 lg:px-16 lg:grid-cols-2;
 }
 
-@media (min-width: 992px) {
-  .container {
-    padding: var(--spacing-5) var(--spacing-16);
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .logo {
-    justify-self: flex-start;
-  }
-
-  .container .site__links {
-    justify-self: end;
-  }
+.logo {
+  @apply lg:justify-self-start;
 }

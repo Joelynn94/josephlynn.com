@@ -14,7 +14,12 @@ module.exports = {
           100: "#19212d",
           500: "#121820",
         },
-        gray: colors.coolGray
+        black: colors.black,
+        white: colors.white,
+        coolGray: colors.coolGray,
+        red: colors.red,
+        yellow: colors.amber,
+        blue: colors.blue,
       },
     },
   },
