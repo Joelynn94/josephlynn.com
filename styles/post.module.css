@@ -3,7 +3,7 @@
 }
 
 .time {
-  @apply block mb-2 text-coolGray-500 font-bold;
+  @apply block text-coolGray-500 font-bold;
 }
 
 .link {
