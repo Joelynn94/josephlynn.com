@@ -25,7 +25,7 @@ export async function getStaticProps() {
 
 export default function Home({ lastestPosts }) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>Joseph Lynn | Home</title>
       </Head>

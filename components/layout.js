@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import config from "../lib/config";
+import Footer from "./footer";
 import Navbar from "./navbar";
 import styles from "../styles/layout.module.css";
 
 export const siteTitle = "Next.js Sample Website";
 
-const Layout = ({ children, home }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <Head>
@@ -28,13 +29,7 @@ const Layout = ({ children, home }) => {
         <Navbar config={config} />
       </header>
       <main className={styles.container}>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      <Footer config={config} />
     </>
   );
 };
