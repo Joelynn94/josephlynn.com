@@ -10,6 +10,7 @@ import Post from "../components/post";
 import Button from "../components/button";
 import Badge from "../components/badge";
 import Project from "../components/project";
+import Form from "../components/form"
 import buttonStyles from "../styles/button.module.css";
 import heroStyles from "../styles/hero.module.css";
 import utilStyles from "../styles/utils.module.css";
@@ -87,6 +88,7 @@ export default function Home({ allPostsData }) {
           Contact.
           <Badge>Status: Hireable</Badge>
         </h2>
+        <Form />
       </section>
     </Layout>
   );
