@@ -86,8 +86,8 @@ body {
   flex-direction: column;
   font-family: var(--fontFamily-sans);
   background-color: var(--color-bg-dark);
-  color: var(--color-main-text);
   line-height: 30px;
+  @apply text-coolGray-50;
 }
 
 a {

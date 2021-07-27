@@ -14,11 +14,6 @@
   @apply mt-8 md:mt-0;
 }
 
-/* ALT INFO SECTION */
-/* .info {
-  @apply mt-8 lg:mt-0 lg:-ml-24 lg:bg-secondary-500 lg:p-6;
-} */
-
 .feature {
   @apply text-primary-100 text-xl;
 }

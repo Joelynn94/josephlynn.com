@@ -33,9 +33,9 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.section}>
         <div className={heroStyles.container}>
           <div className={heroStyles.content}>
-            <h1>I'm Joseph Lynn</h1>
-            <h2>Frontend Web Developer</h2>
-            <p>
+            <h1 className={heroStyles.heading}>I'm Joseph Lynn</h1>
+            <h2 className={heroStyles.subheading}>Frontend Web Developer</h2>
+            <p className={heroStyles.blurb}>
               Web developer based in Tampa, Florida who enjoys building web
               applications with a great user experience. You can view my
               projects on GitHub, professional profile on LinkedIn, or download
@@ -43,7 +43,7 @@ export default function Home({ allPostsData }) {
             </p>
             <UserLinks config={config} />
           </div>
-          <div className={heroStyles.headshot}>
+          <div className={heroStyles["img-wrapper"]}>
             <img
               className={heroStyles.img}
               src="/images/profile.jpg"
