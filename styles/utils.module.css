@@ -7,7 +7,7 @@
 }
 
 .title {
-  @apply flex items-center justify-between mb-8 pb-2 border-b-4 border-solid sm:text-3xl md:text-4xl;
+  @apply flex items-center justify-between mb-8 pb-2 border-b-4 border-solid;
 }
 
 .borderCircle {
