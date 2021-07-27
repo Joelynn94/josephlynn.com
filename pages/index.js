@@ -35,10 +35,10 @@ export default function Home({ allPostsData }) {
             <h1 className={heroStyles.heading}>I'm Joseph Lynn</h1>
             <h2 className={heroStyles.subheading}>Frontend Web Developer</h2>
             <p className={heroStyles.blurb}>
-              Web developer based in Tampa, Florida. I enjoy building web
-              applications that have a great user experience. You can view my
-              projects on GitHub, professional profile on LinkedIn, or download
-              my resume.
+              Based in Tampa, Florida - I enjoy solving business problems and
+              building web applications that have a great user experience. You
+              can see what I'm coding on GitHub, view my professional profile on
+              LinkedIn, or download my resume.
             </p>
             <UserLinks config={config} />
           </div>
