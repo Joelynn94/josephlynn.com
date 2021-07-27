@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 import config from "../lib/config";
-import { getSortedPostsData } from "../lib/posts";
+import { getLatestPosts } from "../lib/posts";
 import Layout, { siteTitle } from "../components/layout";
 import UserLinks from "../components/userlinks";
 import Post from "../components/post";
@@ -15,19 +15,19 @@ import heroStyles from "../styles/hero.module.css";
 import utilStyles from "../styles/utils.module.css";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const lastestPosts = getLatestPosts();
   return {
     props: {
-      allPostsData,
+      lastestPosts,
     },
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ lastestPosts }) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Joseph Lynn | Home</title>
       </Head>
       <section className={utilStyles.section}>
         <div className={heroStyles.container}>
@@ -61,7 +61,7 @@ export default function Home({ allPostsData }) {
           </Link>
         </h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map((post) => (
+          {lastestPosts.map((post) => (
             <Post key={post.id} post={post} />
           ))}
         </ul>
