@@ -13,6 +13,7 @@ module.exports = {
         secondary: {
           100: "#19212d",
           500: "#121820",
+          900: "#0e131a",
         },
         black: colors.black,
         white: colors.white,
