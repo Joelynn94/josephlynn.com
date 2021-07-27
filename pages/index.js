@@ -38,7 +38,7 @@ export default function Home({ allPostsData }) {
               Based in Tampa, Florida - I enjoy solving business problems and
               building web applications that have a great user experience. You
               can see what I'm coding on GitHub, view my professional profile on
-              LinkedIn, or download my resume.
+              LinkedIn, or see what I am writing on my blog.
             </p>
             <UserLinks config={config} />
           </div>
