@@ -4,7 +4,7 @@ import Button from "./button";
 import projectStyles from "../styles/project.module.css";
 import buttonStyles from "../styles/button.module.css";
 
-const project = () => {
+const Project = ({ project }) => {
   return (
     <div className={projectStyles.container}>
       <div className={projectStyles["img-wrapper"]}>
@@ -15,21 +15,18 @@ const project = () => {
         />
       </div>
       <div className={`${projectStyles.info} ${projectStyles.secondary}`}>
-        <h4 className={projectStyles.feature}>Featured Project</h4>
-        <h2 className={projectStyles.title}>Manage</h2>
-        <p className={projectStyles.description}>
-          This project required me to build a fully responsive landing page to
-          the designs provided. I used HTML5, along with CSS Grid and JavaScript
-          for the areas that required interactivity, such as the testimonial
-          slider.
-        </p>
+        {project.isFeatured && (
+          <h4 className={projectStyles.feature}>Featured Project</h4>
+        )}
+        <h2 className={projectStyles.title}>{project.title}</h2>
+        <p className={projectStyles.description}>{project.description}</p>
         <div className={projectStyles.buttons}>
-          <Link href="/">
+          <Link href={project.link}>
             <a className={projectStyles.link}>
               <Button buttonStyle={buttonStyles.primary}>View Project</Button>
             </a>
           </Link>
-          <Link href="/">
+          <Link href={project.github}>
             <a className={projectStyles.link}>
               <Button buttonStyle={buttonStyles.secondary}>Live Website</Button>
             </a>
@@ -40,4 +37,4 @@ const project = () => {
   );
 };
 
-export default project;
+export default Project;

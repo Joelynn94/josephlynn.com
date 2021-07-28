@@ -2,17 +2,18 @@ import Head from "next/head";
 import Link from "next/link";
 
 import config from "../lib/config";
+import projectData from "../lib/projects";
 import { getLatestPosts } from "../lib/posts";
 import Layout, { siteTitle } from "../components/layout";
 import UserLinks from "../components/userlinks";
 import Post from "../components/post";
 import Button from "../components/button";
 import Badge from "../components/badge";
-import Project from "../components/project";
 import Form from "../components/form";
 import buttonStyles from "../styles/button.module.css";
 import heroStyles from "../styles/hero.module.css";
 import utilStyles from "../styles/utils.module.css";
+import Project from "../components/project";
 
 export async function getStaticProps() {
   const lastestPosts = getLatestPosts();
@@ -76,10 +77,11 @@ export default function Home({ lastestPosts }) {
           </Link>
         </h2>
         <div className="project-grid">
-          <Project />
-          <Project />
-          <Project />
-          <Project />
+          {projectData.map((project) => {
+            if (project.isFeatured) {
+              return <Project key={project.id} project={project} />;
+            }
+          })}
         </div>
       </section>
       <section className={utilStyles.section}>

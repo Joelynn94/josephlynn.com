@@ -20,12 +20,10 @@ const Blog = ({ allPostsData }) => {
         <title>Joseph Lynn | Blog</title>
       </Head>
       <section className={utilStyles.section}>
-        <h2 className={utilStyles.title}>Blog Posts</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map((post) => (
-            <Post key={post.id} post={post} />
-          ))}
-        </ul>
+        <h1 className={utilStyles.title}>Blog Posts</h1>
+        {allPostsData.map((post) => (
+          <Post key={post.id} post={post} />
+        ))}
       </section>
     </Layout>
   );
