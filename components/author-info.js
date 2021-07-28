@@ -7,7 +7,7 @@ const AuthorInfo = ({ config }) => {
       <p className={authorStyles.name}>Written by {config.author.name}</p>
       <p className={authorStyles.links}>
         {config.userLinks.map((link) => (
-          <Link href={link.url}>
+          <Link href={link.url} key={link.label}>
             <a>{link.label} </a>
           </Link>
         ))}

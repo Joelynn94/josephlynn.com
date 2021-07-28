@@ -21,7 +21,7 @@ const Blog = ({ allPostsData }) => {
       </Head>
       <section className={utilStyles.section}>
         <h1 className={utilStyles.title}>Blog Posts</h1>
-        {allPostData &&
+        {allPostsData &&
           allPostsData.map((post) => <Post key={post.id} post={post} />)}
       </section>
     </Layout>

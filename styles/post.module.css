@@ -7,7 +7,7 @@
 }
 
 .link {
-  @apply flex items-center pt-2.5 pb-2.5;
+  @apply flex items-center pb-2.5;
 }
 
 .title {

@@ -61,11 +61,9 @@ export default function Home({ lastestPosts }) {
             </a>
           </Link>
         </h2>
-        <ul className={utilStyles.list}>
-          {lastestPosts.map((post) => (
-            <Post key={post.id} post={post} />
-          ))}
-        </ul>
+        {lastestPosts.map((post) => (
+          <Post key={post.id} post={post} />
+        ))}
       </section>
       <section className={utilStyles.section}>
         <h2 className={utilStyles.title}>
