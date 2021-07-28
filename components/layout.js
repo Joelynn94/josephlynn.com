@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import config from "../lib/config";
 import Footer from "./footer";
 import Navbar from "./navbar";

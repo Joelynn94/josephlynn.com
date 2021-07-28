@@ -2,6 +2,7 @@ import Head from "next/head";
 import Date from "../../components/date";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import markdownStyles from "../../styles/markdown-styles.module.css";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -26,12 +27,15 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article className={markdownStyles.wrapper}>
         <h1>{postData.title}</h1>
         <div>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          className={markdownStyles["markdown"]}
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </article>
     </Layout>
   );

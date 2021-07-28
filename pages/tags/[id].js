@@ -25,7 +25,7 @@ import Layout from "../../components/layout";
 
 const Tag = ({ postData }) => {
   const router = useRouter();
-  const { id } = router.query;
+  const { tag } = router.query;
   console.log(router);
 
   return (
@@ -33,7 +33,7 @@ const Tag = ({ postData }) => {
       <Head>
         <title>Joseph Lynn | Blog</title>
       </Head>
-      <p>{id}</p>
+      <p>{tag}</p>
     </Layout>
   );
 };

@@ -1,5 +1,5 @@
 .wrapper {
-  @apply bg-secondary-100;
+  @apply bg-secondary-100 p-5;
 }
 
 .container {
