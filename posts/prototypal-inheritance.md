@@ -10,8 +10,11 @@ JavaScript is a prototype-based language that has prototypal inheritance. Which 
 I'll give some code examples below and here is the [code sandbox](https://codesandbox.io/s/javascript-prototypal-inheritance-bnj91) to view the code as well.
 
 [Reference: class vs prototypal](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
+
 [Reference: inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+
 [Reference: Object prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+
 [Reference: Constructor Pattern](https://www.educative.io/collection/page/5429798910296064/5725579815944192/5920633608208384)
 
 ## Classes are functions

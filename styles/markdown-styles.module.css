@@ -1,5 +1,9 @@
 .wrapper {
-  @apply mt-12;
+  @apply mt-12 text-coolGray-100;
+}
+
+.header {
+  @apply my-5;
 }
 
 .markdown {

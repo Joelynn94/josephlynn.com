@@ -5,7 +5,7 @@ export default function Date({ dateString }) {
   const date = parseISO(dateString);
   return (
     <time className={postStyles.time} dateTime={dateString}>
-      {format(date, "LLLL d, yyyy")}
+      Posted On: {format(date, "LLLL d, yyyy")}
     </time>
   );
 }

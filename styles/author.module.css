@@ -1,0 +1,11 @@
+.section {
+  @apply mb-10;
+}
+
+.name {
+  @apply text-coolGray-300;
+}
+
+.links {
+  @apply flex gap-3;
+}
