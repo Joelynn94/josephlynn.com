@@ -45,12 +45,14 @@ const Tag = ({ relatedPosts }) => {
       <Head>
         <title>Joseph Lynn | Tag: {tag}</title>
       </Head>
-      <h2>Posts tagged: {tag}</h2>
-      <h3>
-        {relatedPosts.length > 2
-          ? `${relatedPosts.length} posts found.`
-          : `${relatedPosts.length} post found.`}
-      </h3>
+      <header className="py-8">
+        <h2>Posts tagged: {tag}</h2>
+        <h3>
+          {relatedPosts.length > 2
+            ? `${relatedPosts.length} posts found.`
+            : `${relatedPosts.length} post found.`}
+        </h3>
+      </header>
       <section className={utilStyles.section}>
         <h1 className={utilStyles.title}>Related Posts</h1>
         {relatedPosts.map((post) => (
