@@ -6,8 +6,12 @@
   @apply text-coolGray-300;
 }
 
+.blurb {
+  @apply mb-4;
+}
+
 .img-wrapper {
-  @apply w-full	justify-center content-center;
+  @apply w-full	flex justify-center content-center;
 }
 
 .img {
