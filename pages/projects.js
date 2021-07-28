@@ -12,9 +12,10 @@ const projects = () => {
       </Head>
       <section className={utilStyles.section}>
         <h1 className={utilStyles.title}>Projects</h1>
-        {projectData.map((project) => (
-          <Project key={project.id} project={project} />
-        ))}
+        {projectData &&
+          projectData.map((project) => (
+            <Project key={project.id} project={project} />
+          ))}
       </section>
     </Layout>
   );

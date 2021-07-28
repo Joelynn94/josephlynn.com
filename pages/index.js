@@ -77,11 +77,12 @@ export default function Home({ lastestPosts }) {
           </Link>
         </h2>
         <div className="project-grid">
-          {projectData.map((project) => {
-            if (project.isFeatured) {
-              return <Project key={project.id} project={project} />;
-            }
-          })}
+          {projectData &&
+            projectData.map((project) => {
+              if (project.isFeatured) {
+                return <Project key={project.id} project={project} />;
+              }
+            })}
         </div>
       </section>
       <section className={utilStyles.section}>
