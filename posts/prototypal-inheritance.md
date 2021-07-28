@@ -5,7 +5,7 @@ tags: ["javascript", "react"]
 excerpt: "JavaScript is a prototype-based language that has prototypal inheritance. Which is not the same as classical inheritance. Prototypal inheritance is more flexible than classical inheritance."
 ---
 
-JavaScript is a prototype-based language that has prototypal inheritance. Which is not the same as classical inheritance. **_Prototypal inheritance is more flexible than classical inheritance._** With classical inheritance, you inherit all of the parent's methods. With prototypal inheritance, you can inherit specific functions by adding them to the .prototype.
+> JavaScript is a prototype-based language that has prototypal inheritance. Which is not the same as classical inheritance. **_Prototypal inheritance is more flexible than classical inheritance._** With classical inheritance, you inherit all of the parent's methods. With prototypal inheritance, you can inherit specific functions by adding them to the .prototype.
 
 I'll give some code examples below and here is the [code sandbox](https://codesandbox.io/s/javascript-prototypal-inheritance-bnj91) to view the code as well.
 

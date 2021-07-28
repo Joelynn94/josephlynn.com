@@ -1,5 +1,5 @@
 .wrapper {
-  @apply mt-12 text-coolGray-300;
+  @apply my-12 text-coolGray-300;
 }
 
 .header {
@@ -12,15 +12,22 @@
 
 .markdown p,
 .markdown ul,
-.markdown ol,
+.markdown ol {
+  @apply my-5;
+}
+
 .markdown blockquote {
-  @apply my-6;
+  @apply bg-secondary-500 pl-6 p-2 shadow-lg border-l-8 border-primary-500 border-solid;
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-3xl mt-12 leading-snug mb-4 pb-2 border-b-2 border-solid;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply text-2xl mt-8 leading-snug mb-4 pb-2 border-b-2 border-solid;
+}
+
+.markdown h4 {
+  @apply text-xl mt-4 pb-2 leading-snug border-b-2 border-solid;
 }
