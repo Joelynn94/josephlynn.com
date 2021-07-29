@@ -20,6 +20,7 @@ export async function getStaticPaths() {
     "classes",
     "oop",
     "inheritance",
+    "beginners",
   ];
   // create pages for each tag
   const paths = tags.map((tag) => ({
