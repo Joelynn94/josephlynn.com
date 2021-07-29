@@ -1,20 +1,17 @@
 ---
 title: "JavaScript - Prototypal Inheritance"
 date: "2021-07-23"
-tags: ["javascript", "react"]
-excerpt: "JavaScript is a prototype-based language that has prototypal inheritance. Which is not the same as classical inheritance. Prototypal inheritance is more flexible than classical inheritance."
+tags: ["javascript", "inheritance", "oop", "classes"]
+excerpt: "Prototypal inheritance is more flexible than classical inheritance. With classical inheritance, you inherit all of the parent's methods. With prototypal inheritance, you can inherit specific functions by adding them to the .prototype."
 ---
 
-> JavaScript is a prototype-based language that has prototypal inheritance. Which is not the same as classical inheritance. **_Prototypal inheritance is more flexible than classical inheritance._** With classical inheritance, you inherit all of the parent's methods. With prototypal inheritance, you can inherit specific functions by adding them to the .prototype.
+JavaScript is a prototype-based language that has prototypal inheritance. Which is not the same as classical inheritance. **_Prototypal inheritance is more flexible than classical inheritance._** With classical inheritance, you inherit all of the parent's methods. With prototypal inheritance, you can inherit specific functions by adding them to the .prototype.
 
 I'll give some code examples below and here is the [code sandbox](https://codesandbox.io/s/javascript-prototypal-inheritance-bnj91) to view the code as well.
 
 [Reference: class vs prototypal](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
-
 [Reference: inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-
 [Reference: Object prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-
 [Reference: Constructor Pattern](https://www.educative.io/collection/page/5429798910296064/5725579815944192/5920633608208384)
 
 ## Classes are functions
