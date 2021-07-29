@@ -1,10 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Logo = ({ config }) => {
   return (
     <Link href="/">
       <a>
-        <img src={config.siteLogo} alt="Joseph Lynn Site Logo" />
+        <Image
+          src={config.siteLogo}
+          alt="Joseph Lynn Site Logo"
+          width={54}
+          height={64}
+        />
       </a>
     </Link>
   );

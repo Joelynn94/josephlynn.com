@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import socialStyles from "../styles/social.module.css";
 
 function UserLinks({ config }) {
@@ -10,10 +11,12 @@ function UserLinks({ config }) {
         userLinks.map((link) => (
           <Link href={link.url} key={link.label}>
             <a className={socialStyles.link} target="_blank">
-              <img
+              <Image
                 className={socialStyles.icon}
                 src={link.icon}
                 alt={`${link.label} icon`}
+                width={32}
+                height={32}
               />
             </a>
           </Link>

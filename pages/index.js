@@ -4,16 +4,15 @@ import Link from "next/link";
 import config from "../lib/config";
 import projectData from "../lib/projects";
 import { getLatestPosts } from "../lib/posts";
-import Layout, { siteTitle } from "../components/layout";
-import UserLinks from "../components/userlinks";
-import Post from "../components/post";
+import Layout from "../components/layout";
 import Button from "../components/button";
+import Hero from "../components/hero";
+import Post from "../components/post";
+import Project from "../components/project";
 import Badge from "../components/badge";
 import Form from "../components/form";
 import buttonStyles from "../styles/button.module.css";
-import heroStyles from "../styles/hero.module.css";
 import utilStyles from "../styles/utils.module.css";
-import Project from "../components/project";
 
 export async function getStaticProps() {
   const lastestPosts = getLatestPosts();
@@ -31,26 +30,7 @@ export default function Home({ lastestPosts }) {
         <title>Joseph Lynn | Home</title>
       </Head>
       <section className={utilStyles.section}>
-        <div className={heroStyles.container}>
-          <div className={heroStyles.content}>
-            <h1 className={heroStyles.heading}>I'm Joseph Lynn</h1>
-            <h2 className={heroStyles.subheading}>Frontend Web Developer</h2>
-            <p className={heroStyles.blurb}>
-              Based in Tampa, Florida - I enjoy solving business problems and
-              building web applications that have a great user experience. You
-              can see what I'm coding on GitHub, view my professional profile on
-              LinkedIn, or see what I am writing on my blog.
-            </p>
-            <UserLinks config={config} />
-          </div>
-          <div className={heroStyles["img-wrapper"]}>
-            <img
-              className={heroStyles.img}
-              src="/images/headshot.jpg"
-              alt="Headshot of Joseph Lynn"
-            />
-          </div>
-        </div>
+        <Hero config={config} />
       </section>
       <section className={utilStyles.section}>
         <h2 className={utilStyles.title}>
