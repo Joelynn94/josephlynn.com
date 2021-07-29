@@ -16,7 +16,7 @@ export async function getStaticPaths() {
     "arrays",
     "todoapp",
     "fetch",
-    "localStorage",
+    "localstorage",
     "classes",
     "oop",
     "inheritance",
