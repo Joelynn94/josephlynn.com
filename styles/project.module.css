@@ -1,3 +1,7 @@
+.grid-project {
+  @apply grid gap-12;
+}
+
 .container {
   @apply mt-12 grid md:grid-cols-2 md:gap-12 m-auto items-center max-w-md md:max-w-3xl  lg:w-full xl:max-w-6xl;
 }
@@ -15,7 +19,7 @@
 }
 
 .feature {
-  @apply text-primary-100 text-xl;
+  @apply text-primary-100 text-xl mb-2;
 }
 
 .title {

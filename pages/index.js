@@ -13,6 +13,7 @@ import Badge from "../components/badge";
 import Form from "../components/form";
 import buttonStyles from "../styles/button.module.css";
 import utilStyles from "../styles/utils.module.css";
+import projectStyles from "../styles/project.module.css";
 
 export async function getStaticProps() {
   const lastestPosts = getLatestPosts();
@@ -54,7 +55,7 @@ export default function Home({ lastestPosts }) {
             </a>
           </Link>
         </h2>
-        <div className="project-grid">
+        <div className={projectStyles["grid-project"]}>
           {projectData &&
             projectData.map((project) => {
               if (project.isFeatured) {
