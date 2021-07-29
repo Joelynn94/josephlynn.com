@@ -59,7 +59,7 @@ const Tag = ({ relatedPosts }) => {
       <Head>
         <title>Joseph Lynn | Tag: {tag}</title>
       </Head>
-      <header className="py-8">
+      <header className={`${utilStyles.section} py-8`}>
         <h2>Posts tagged: {tag}</h2>
         <h3>
           {relatedPosts.length > 2

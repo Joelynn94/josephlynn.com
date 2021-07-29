@@ -9,8 +9,8 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <link rel="icon" href="/icons/favicon.ico" />
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta charSet="utf-8" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="keywords"
           content="Joseph Lynn, JavaScript, React, Web Development"
