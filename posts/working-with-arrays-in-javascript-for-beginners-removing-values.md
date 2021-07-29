@@ -9,7 +9,7 @@ I recently finished (May 2020) the coding bootcamp I started back in October 201
 
 <em>Note: I recently wrote another blog post on how to add values to arrays you can check that out here: [Working with Arrays in JavaScript for beginners - Adding values](https://dev.to/joelynn94/working-with-arrays-in-javascript-1jfi)</em>
 
-# Removing array values
+## Removing array values
 
 Let's start by creating an array with a couple values.
 

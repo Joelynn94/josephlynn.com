@@ -5,7 +5,7 @@ tags: ["javascript", "react", "arrays", "objects"]
 excerpt: "This quick tutorial shows you how to setup basic state values using an array of objects and how you can return a new array state value."
 ---
 
-# How to declare initial state
+## How to declare initial state
 
 To use the useState hook you will need to import it from React.
 
@@ -25,7 +25,7 @@ Here's what that looks like.
 const [state, setState] - useState([])
 ```
 
-# Creating the component
+## Creating the component
 
 Let's start building a basic component. Here we will create the initial state to a basic component.
 
@@ -73,7 +73,7 @@ return (
 
 This is what we should have so far: ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5ciojno7jakf57p6c25f.png)
 
-# Creating component functionality
+## Creating component functionality
 
 You will see we declared a function called "handleAddNewUser". That function doesn't exist yet. Lets create that.
 

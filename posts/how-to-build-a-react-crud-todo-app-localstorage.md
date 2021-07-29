@@ -13,7 +13,7 @@ I suggest following along and if you get stuck, you can fork the code from the [
 
 In the previous post, we created a very simple todo app that can add new todos. Lets now add a simple storage option for the todo list.
 
-# 1. Adding the useEffect hook
+## 1. Adding the useEffect hook
 
 We are going to use the useEffect hook to add to our application. This useEffect hook will be responsible to save new todos into localstorage.
 
@@ -117,7 +117,7 @@ export default function App() {
   );
 ```
 
-# 2. Restoring todos from localstorage (lazy initial state)
+## 2. Restoring todos from localstorage (lazy initial state)
 
 We are going to change the initial state to what's saved in localstorage.
 
@@ -143,7 +143,7 @@ const [todos, setTodos] = useState(() => {
 });
 ```
 
-# 3. Put it all together
+## 3. Put it all together
 
 Now we should have simple storage solution for our todos.
 

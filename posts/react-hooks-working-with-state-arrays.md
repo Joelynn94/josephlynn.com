@@ -5,7 +5,7 @@ tags: ["javascript", "react", "arrays"]
 excerpt: "To keep track of the state, we need to call the useState hook with an initial value. Since useState returns an array we are able to destructure the current state value and a function that lets you update the state."
 ---
 
-# How to declare initial state
+## How to declare initial state
 
 To use the useState hook you will need to import it from React.
 
@@ -25,7 +25,7 @@ Here's what that looks like.
 const [state, setState] = useState([]);
 ```
 
-# Creating the component
+## Creating the component
 
 Let's start building a basic component. Here we will create the initial state to a basic component.
 
@@ -70,7 +70,7 @@ Let's add a basic button to change the state and a spot in the DOM to see the st
 This is what we will have to start with:
 ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hbjr5tye8gnwqg2rlv3v.png)
 
-# Creating component functionality
+## Creating component functionality
 
 You see we declared a function called "handleAddUser". That function doesn't exist yet. Lets create that.
 

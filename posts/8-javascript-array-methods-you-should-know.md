@@ -73,7 +73,7 @@ const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 Reference: [MDN docs: Array.prototype.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
-# Array.includes(item)
+## Array.includes(item)
 
 ```js
 /*
@@ -99,7 +99,7 @@ const groceries = ["apples", "bananas", "bread", "milk"];
 
 Reference: [MDN docs: Array.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 
-# Array.indexOf(item)
+## Array.indexOf(item)
 
 ```js
 /*
@@ -122,7 +122,7 @@ const groceries = ["apples", "bananas", "bread", "milk"];
 
 Reference: [MDN docs: Array.prototype.indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
-# Array.every(callback)
+## Array.every(callback)
 
 ```js
 /*
@@ -140,7 +140,7 @@ console.log(allAbove15); // => false
 
 Reference: [MDN docs: Array.prototype.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 
-# Array.some(callback)
+## Array.some(callback)
 
 ```js
 /*
@@ -162,7 +162,7 @@ console.log(someUnder10); // => false
 
 Reference: [MDN docs: Array.prototype.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 
-# Array.map(callback)
+## Array.map(callback)
 
 ```js
 /*

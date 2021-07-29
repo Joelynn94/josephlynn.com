@@ -5,7 +5,7 @@ tags: ["javascript", "react"]
 excerpt: "This quick tutorial shows you how to start using the useEffect hook and how you can change when the useEffect runs."
 ---
 
-# Side Effects
+## Side Effects
 
 Sometimes your component may have a side effect. Some examples of side effects are:
 
