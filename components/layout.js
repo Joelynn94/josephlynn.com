@@ -4,25 +4,36 @@ import Footer from "./footer";
 import Navbar from "./navbar";
 import styles from "../styles/layout.module.css";
 
-export const siteTitle = "Next.js Sample Website";
-
 const Layout = ({ children }) => {
   return (
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta
+          name="keywords"
+          content="Joseph Lynn, JavaScript, React, Web Development"
+        />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Personal Website for Joseph Lynn, Frontend Web Developer"
         />
         <meta
           property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          content={`https://nextjs-blog-brown-iota.vercel.app${config.siteImage}`}
         />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="og:type" content="website" />
+        <meta name="og:title" content={config.description} />
+        <meta name="og:url" content="https://josephlynn.com" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content={config.social.twitter} />
+        <meta name="twitter:title" content={config.title} />
+        <meta name="twitter:description" content={config.description} />
+        <meta
+          name="twitter:image"
+          content={`https://nextjs-blog-brown-iota.vercel.app${config.siteImage}`}
+        />
       </Head>
       <header className={styles.header}>
         <Navbar config={config} />
