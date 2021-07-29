@@ -15,6 +15,11 @@ export async function getStaticPaths() {
     "objects",
     "arrays",
     "todoapp",
+    "fetch",
+    "localStorage",
+    "classes",
+    "oop",
+    "inheritance",
   ];
   // create pages for each tag
   const paths = tags.map((tag) => ({
