@@ -9,7 +9,7 @@ const Project = ({ project }) => {
     <div className={projectStyles.container}>
       <div className={projectStyles["img-wrapper"]}>
         <img
-          src="/images/profile.jpg"
+          src={project.image}
           alt="Headshot of Joseph Lynn"
           className={projectStyles.img}
         />

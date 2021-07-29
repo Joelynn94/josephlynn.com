@@ -7,7 +7,7 @@
 }
 
 .img {
-  @apply w-full	rounded align-middle border-none;
+  @apply w-full	rounded align-middle border-none object-cover;
 }
 
 .info {

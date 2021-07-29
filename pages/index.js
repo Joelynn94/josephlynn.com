@@ -46,7 +46,7 @@ export default function Home({ lastestPosts }) {
           <div className={heroStyles["img-wrapper"]}>
             <img
               className={heroStyles.img}
-              src="/images/profile.jpg"
+              src="/images/headshot.jpg"
               alt="Headshot of Joseph Lynn"
             />
           </div>
