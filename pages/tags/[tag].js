@@ -7,7 +7,7 @@ import utilStyles from "../../styles/utils.module.css";
 
 export async function getStaticPaths() {
   // tags to create pages from
-  const tags = ["javascript", "react", "api", "snippet"];
+  const tags = ["javascript", "react", "api", "snippet", "objects", "arrays"];
   // create pages for each tag
   const paths = tags.map((tag) => ({
     params: {
