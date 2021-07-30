@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
-
 import config from "../lib/config";
 import projectData from "../lib/projects";
 import { getLatestPosts } from "../lib/posts";
@@ -24,7 +22,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ lastestPosts }) {
+const home = ({ lastestPosts }) => {
   return (
     <Layout>
       <Head>
@@ -69,4 +67,6 @@ export default function Home({ lastestPosts }) {
       </section>
     </Layout>
   );
-}
+};
+
+export default home;

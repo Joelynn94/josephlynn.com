@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Button from "./button";
 import projectStyles from "../styles/project.module.css";
 import buttonStyles from "../styles/button.module.css";
