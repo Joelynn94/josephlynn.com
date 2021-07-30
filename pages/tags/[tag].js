@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import Post from "../../components/post";
 import { getSortedPostsData } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.css";

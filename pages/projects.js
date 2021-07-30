@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import Project from "../components/project";
 import projectData from "../lib/projects";
 import utilStyles from "../styles/utils.module.css";
