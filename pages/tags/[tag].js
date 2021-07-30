@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { getSortedPostsData } from "../../lib/posts";
 import Layout from "../../components/Layout";
 import Post from "../../components/Post";
-import { getSortedPostsData } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.css";
 
 export async function getStaticPaths() {
