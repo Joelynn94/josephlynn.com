@@ -25,7 +25,7 @@ const Project = ({ project }) => {
         <p className={projectStyles.description}>{project.description}</p>
         <div className={projectStyles.buttons}>
           <Link href={project.link}>
-            <a className={projectStyles.link}>
+            <a className={projectStyles.github}>
               <Button buttonStyle={buttonStyles.primary}>View Project</Button>
             </a>
           </Link>
