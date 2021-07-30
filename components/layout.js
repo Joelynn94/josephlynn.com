@@ -1,7 +1,7 @@
 import Head from "next/head";
 import config from "../lib/config";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+import Footer from "./footer";
+import Navbar from "./navbar";
 import styles from "../styles/layout.module.css";
 
 const Layout = ({ children }) => {

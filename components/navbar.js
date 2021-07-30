@@ -1,5 +1,5 @@
-import Logo from "./Logo";
-import NavLinks from "./Navlinks";
+import Logo from "./logo";
+import NavLinks from "./navlinks";
 import navbarStyles from "../styles/navbar.module.css";
 
 const Navbar = ({ config }) => {
