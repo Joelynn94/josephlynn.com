@@ -1,4 +1,0 @@
-[build]
-  command = "next build"
-  functions = "out"
-  publish = "next build"
