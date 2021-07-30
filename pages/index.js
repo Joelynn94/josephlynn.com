@@ -36,11 +36,9 @@ export default function Home({ lastestPosts }) {
       <section className={utilStyles.section}>
         <h2 className={utilStyles.title}>
           Latest Posts.
-          <Link href="/blog">
-            <a>
-              <Button buttonStyle={buttonStyles.secondary}>View All</Button>
-            </a>
-          </Link>
+          <Button buttonStyle={buttonStyles.secondary} href="/blog">
+            View All
+          </Button>
         </h2>
         {lastestPosts.map((post) => (
           <Post key={post.id} post={post} />
@@ -49,11 +47,9 @@ export default function Home({ lastestPosts }) {
       <section className={utilStyles.section}>
         <h2 className={utilStyles.title}>
           Projects.
-          <Link href="/projects">
-            <a>
-              <Button buttonStyle={buttonStyles.secondary}>View All</Button>
-            </a>
-          </Link>
+          <Button buttonStyle={buttonStyles.secondary} href="/projects">
+            View All
+          </Button>
         </h2>
         <div className={projectStyles["grid-project"]}>
           {projectData &&

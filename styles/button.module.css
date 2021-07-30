@@ -2,7 +2,7 @@
   font-family: var(--fontFamily-sans);
   @apply cursor-pointer p-0 border-2
     border-solid border-transparent transition duration-300 ease-in-out
-    font-bold flex items-center text-base py-2 px-3;
+    font-medium flex items-center justify-center text-base py-2 px-3 hover:no-underline;
 }
 
 .btn:disabled {

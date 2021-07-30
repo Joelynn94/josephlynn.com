@@ -1,3 +1,4 @@
+import Link from "next/link";
 import buttonStyles from "../styles/button.module.css";
 
 const STYLES = [
@@ -14,6 +15,7 @@ const Button = ({
   disabled,
   onClick,
   buttonStyle,
+  href,
   ...otherProps
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
@@ -21,15 +23,15 @@ const Button = ({
     : STYLES[0];
 
   return (
-    <button
-      className={`${buttonStyles.btn} ${checkButtonStyle}`}
+    <Link
       onClick={onClick}
       type={type}
       disabled={disabled}
       {...otherProps}
+      href={href}
     >
-      {children}
-    </button>
+      <a className={`${buttonStyles.btn} ${checkButtonStyle}`}>{children}</a>
+    </Link>
   );
 };
 

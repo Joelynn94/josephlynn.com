@@ -52,7 +52,7 @@ const Form = () => {
       <div className="mt-5">
         <button
           type="submit"
-          className="inline-flex justify-center py-2 px-4 border border-transparent font-medium rounded-md text-secondary-100 bg-primary-100 hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-100"
+          className="inline-flex justify-center py-2 px-3 border border-transparent font-medium text-secondary-100 bg-primary-100 hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-100"
         >
           Send Message
         </button>

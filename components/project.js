@@ -24,16 +24,12 @@ const Project = ({ project }) => {
         <h2 className={projectStyles.title}>{project.title}</h2>
         <p className={projectStyles.description}>{project.description}</p>
         <div className={projectStyles.buttons}>
-          <Link href={project.link}>
-            <a className={projectStyles.github}>
-              <Button buttonStyle={buttonStyles.primary}>View Project</Button>
-            </a>
-          </Link>
-          <Link href={project.github}>
-            <a className={projectStyles.link}>
-              <Button buttonStyle={buttonStyles.secondary}>Live Website</Button>
-            </a>
-          </Link>
+          <Button buttonStyle={buttonStyles.primary} href={project.link}>
+            View Project
+          </Button>
+          <Button buttonStyle={buttonStyles.secondary} href={project.github}>
+            Live Website
+          </Button>
         </div>
       </div>
     </div>
