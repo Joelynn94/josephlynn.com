@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { getSortedPostsData } from "../lib/posts";
-import Post from "../components/post";
-import Layout from "../components/layout";
+import Post from "../components/Post";
+import Layout from "../components/Layout";
 import utilStyles from "../styles/utils.module.css";
 
 export async function getStaticProps() {
