@@ -50,7 +50,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const Tag = ({ relatedPosts }) => {
+const tag = ({ relatedPosts }) => {
   const router = useRouter();
   const { tag } = router.query;
 
@@ -77,4 +77,4 @@ const Tag = ({ relatedPosts }) => {
   );
 };
 
-export default Tag;
+export default tag;

@@ -1,10 +1,10 @@
 import React from "react";
-import Logo from "./logo";
-import NavLinks from "./navlinks";
+import Logo from "./Logo";
+import NavLinks from "./Navlinks";
+import UserLinks from "./Userlinks";
 import footerStyles from "../styles/footer.module.css";
-import UserLinks from "./userlinks";
 
-const footer = ({ config }) => {
+const Footer = ({ config }) => {
   return (
     <footer className={footerStyles.wrapper}>
       <div className={footerStyles.container}>
@@ -22,4 +22,4 @@ const footer = ({ config }) => {
   );
 };
 
-export default footer;
+export default Footer;

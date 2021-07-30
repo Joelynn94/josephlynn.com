@@ -13,7 +13,7 @@ export async function getStaticProps() {
   };
 }
 
-const Blog = ({ allPostsData }) => {
+const blog = ({ allPostsData }) => {
   return (
     <Layout>
       <Head>
@@ -28,4 +28,4 @@ const Blog = ({ allPostsData }) => {
   );
 };
 
-export default Blog;
+export default blog;

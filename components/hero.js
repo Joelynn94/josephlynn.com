@@ -1,5 +1,5 @@
 import Image from "next/image";
-import UserLinks from "../components/userlinks";
+import UserLinks from "./Userlinks";
 import heroStyles from "../styles/hero.module.css";
 
 const Hero = ({ config }) => {

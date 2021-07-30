@@ -1,16 +1,14 @@
 import Head from "next/head";
-import Link from "next/link";
-
 import config from "../lib/config";
 import projectData from "../lib/projects";
 import { getLatestPosts } from "../lib/posts";
-import Layout from "../components/layout";
-import Button from "../components/button";
-import Hero from "../components/hero";
-import Post from "../components/post";
-import Project from "../components/project";
-import Badge from "../components/badge";
-import Form from "../components/form";
+import Layout from "../components/Layout";
+import Button from "../components/Button";
+import Hero from "../components/Hero";
+import Post from "../components/Post";
+import Project from "../components/Project";
+import Badge from "../components/Badge";
+import Form from "../components/Form";
 import buttonStyles from "../styles/button.module.css";
 import utilStyles from "../styles/utils.module.css";
 import projectStyles from "../styles/project.module.css";
@@ -24,7 +22,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ lastestPosts }) {
+const home = ({ lastestPosts }) => {
   return (
     <Layout>
       <Head>
@@ -69,4 +67,6 @@ export default function Home({ lastestPosts }) {
       </section>
     </Layout>
   );
-}
+};
+
+export default home;

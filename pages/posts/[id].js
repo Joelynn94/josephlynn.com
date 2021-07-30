@@ -1,6 +1,6 @@
 import Head from "next/head";
 import config from "../../lib/config";
-import AuthorInfo from "../../components/author-info";
+import AuthorInfo from "../../components/AuthorInfo";
 import Date from "../../components/date";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
@@ -23,7 +23,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function Post({ postData }) {
+const post = ({ postData }) => {
   return (
     <Layout>
       <Head>
@@ -42,4 +42,6 @@ export default function Post({ postData }) {
       </article>
     </Layout>
   );
-}
+};
+
+export default post;

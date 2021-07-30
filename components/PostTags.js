@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Badge from "./badge";
+import Badge from "./Badge";
 import tagStyles from "../styles/tag.module.css";
 
 function PostTags({ tags }) {

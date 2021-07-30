@@ -1,7 +1,7 @@
 import badgeStyles from "../styles/badge.module.css";
 
-const badge = ({ children }) => {
+const Badge = ({ children }) => {
   return <span className={badgeStyles.container}>{children}</span>;
 };
 
-export default badge;
+export default Badge;
