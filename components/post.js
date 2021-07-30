@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Date from "./date";
-import PostTags from "./posttags";
+import PostTags from "./post-tags";
 import postStyles from "../styles/post.module.css";
 
 const Post = ({ post }) => {

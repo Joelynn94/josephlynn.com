@@ -1,7 +1,7 @@
 import Head from "next/head";
 import config from "../../lib/config";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import AuthorInfo from "../../components/authorinfo";
+import AuthorInfo from "../../components/author-info";
 import Date from "../../components/date";
 import Layout from "../../components/layout";
 import markdownStyles from "../../styles/markdown-styles.module.css";
