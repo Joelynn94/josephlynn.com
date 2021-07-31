@@ -1,4 +1,4 @@
 module.exports = {
   target: "serverless",
-  webpack5: false
+  webpack5: false,
 }

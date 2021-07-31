@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "canvas": "^2.8.0",
     "date-fns": "^2.23.0",
     "gray-matter": "^4.0.3",
     "next": "^11.0.1",
