@@ -7,6 +7,7 @@ const Form = () => {
     name: "",
     email: "",
     message: "",
+    submitted: false,
   });
 
   const handleInputChange = (e) => {
@@ -19,10 +20,42 @@ const Form = () => {
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault;
+    e.preventDefault();
+    console.log("Sending");
+
+    let data = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("Successful!");
+        setFormData({
+          name: data.name,
+          email: data.email,
+          message: data.message,
+          submitted: true,
+        });
+      }
+    });
+
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+      submitted: false,
+    });
   };
 
-  console.log(formData);
   return (
     <form className={formStyles.container}>
       <div className={formStyles.control}>

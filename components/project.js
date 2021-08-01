@@ -23,12 +23,16 @@ const Project = ({ project }) => {
         <h2 className={projectStyles.title}>{project.title}</h2>
         <p className={projectStyles.description}>{project.description}</p>
         <div className={projectStyles.buttons}>
-          <Button buttonStyle={buttonStyles.primary} href={project.link}>
-            View Project
-          </Button>
-          <Button buttonStyle={buttonStyles.secondary} href={project.github}>
-            Live Website
-          </Button>
+          {project.github && (
+            <Button buttonStyle={buttonStyles.primary} href={project.github}>
+              View Project
+            </Button>
+          )}
+          {project.link && (
+            <Button buttonStyle={buttonStyles.secondary} href={project.link}>
+              Live Website
+            </Button>
+          )}
         </div>
       </div>
     </div>
