@@ -27,3 +27,7 @@ module.exports = withBundleAnalyzer({
     return config;
   },
 });
+
+module.exports = {
+  webpack5: false,
+};
