@@ -1,6 +1,29 @@
-const withImages = require('next-images')
-module.exports = withImages()
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
-module.exports = {
-  target: "serverless",
-}
+module.exports = withBundleAnalyzer({
+  reactStrictMode: true,
+  pageExtensions: ["js", "jsx", "md", "mdx"],
+  webpack: (config, { dev, isServer }) => {
+    config.module.rules.push({
+      test: /\.(png|jpe?g|gif|mp4)$/i,
+      use: [
+        {
+          loader: "file-loader",
+          options: {
+            publicPath: "/_next",
+            name: "static/media/[name].[hash].[ext]",
+          },
+        },
+      ],
+    });
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+
+    return config;
+  },
+});
