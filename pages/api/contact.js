@@ -30,5 +30,8 @@ export default function handler(req, res) {
     else console.log(info);
   });
 
-  res.status(200).json({ text: "Submission was successful" });
+  res.status(200).json({
+    message:
+      "Submission was successful! I will get back to you within 24 hours.",
+  });
 }

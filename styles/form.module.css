@@ -13,3 +13,7 @@
 .textarea {
   @apply resize-none h-40;
 }
+
+.error {
+  @apply block mt-3 text-red-500;
+}

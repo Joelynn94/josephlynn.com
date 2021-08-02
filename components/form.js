@@ -7,11 +7,35 @@ const Form = () => {
     name: "",
     email: "",
     message: "",
-    submitted: false,
+    formErrors: {
+      name: "",
+      email: "",
+    },
+    isSubmitted: false,
   });
+
+  const emailTest = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 
   const handleInputChange = (e) => {
     const { value, name } = e.target;
+    const { formErrors } = formData;
+
+    switch (name) {
+      case "name":
+        formErrors.name =
+          value.length < 3 && value.length > 0
+            ? "Name must be a minimum of 3 characters"
+            : "";
+        break;
+      case "email":
+        formErrors.email =
+          !emailTest.test(value) && value.length > 0
+            ? "Please enter a valid email address"
+            : "";
+        break;
+      default:
+        return;
+    }
 
     setFormData((prevState) => ({
       ...prevState,
@@ -19,42 +43,69 @@ const Form = () => {
     }));
   };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    console.log("Sending");
+  const formIsValid = (formInfo) => {
+    let valid = true;
 
-    let data = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) {
-        console.log("Successful!");
-        setFormData({
-          name: data.name,
-          email: data.email,
-          message: data.message,
-          submitted: true,
-        });
+    Object.values(formInfo).forEach((val) => {
+      if (val.length > 0) {
+        valid = false;
       }
     });
 
+    return valid;
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    // destrucuture formData
+    const { formErrors, name, email, message } = formData;
+
+    const data = {
+      name,
+      email,
+      message,
+    };
+
+    if (formIsValid(formErrors)) {
+      setFormData({
+        name: data.name,
+        email: data.email,
+        message: data.message,
+        isSubmitted: true,
+      });
+    } else {
+      return;
+    }
+
+    // if valid - submit the data
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.message);
+      })
+      .catch((error) => console.log(error));
+
+    // then set form data back to original state
     setFormData({
       name: "",
       email: "",
       message: "",
-      submitted: false,
+      formErrors: {
+        name: "",
+        email: "",
+      },
+      isSubmitted: false,
     });
   };
+
+  // destructure formErrors
+  const { formErrors } = formData;
 
   return (
     <form className={formStyles.container}>
@@ -73,6 +124,7 @@ const Form = () => {
           value={formData.name}
           onChange={handleInputChange}
         />
+        {<small className={formStyles.error}>{formErrors.name}</small>}
       </div>
 
       <div className={formStyles.control}>
@@ -83,13 +135,14 @@ const Form = () => {
           Email address
         </label>
         <input
-          type="text"
+          type="email"
           name="email"
           id="email"
           className={formStyles.input}
           value={formData.email}
           onChange={handleInputChange}
         />
+        {<small className={formStyles.error}>{formErrors.email}</small>}
       </div>
 
       <div className={formStyles.control}>

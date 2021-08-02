@@ -25,7 +25,7 @@ const Project = ({ project }) => {
         <div className={projectStyles.buttons}>
           {project.github && (
             <Button buttonStyle={buttonStyles.primary} href={project.github}>
-              View Project
+              Source Code
             </Button>
           )}
           {project.link && (
