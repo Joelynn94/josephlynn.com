@@ -131,7 +131,6 @@ const Form = () => {
 
   // destructure formErrors
   const { formErrors } = formData;
-  console.log(formData);
 
   return (
     <form className={formStyles.container}>
