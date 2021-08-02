@@ -111,7 +111,6 @@ const Form = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data) {
-          console.log(data);
           alertTimer(data.message);
         }
       })
