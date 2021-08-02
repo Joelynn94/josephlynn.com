@@ -30,7 +30,13 @@ const Button = ({
       {...otherProps}
       href={href}
     >
-      <a className={`${buttonStyles.btn} ${checkButtonStyle}`}>{children}</a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${buttonStyles.btn} ${checkButtonStyle}`}
+      >
+        {children}
+      </a>
     </Link>
   );
 };
