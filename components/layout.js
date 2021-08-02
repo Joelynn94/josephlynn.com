@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
         <link rel="icon" href="/icons/favicon.ico" />
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
         <meta
           name="keywords"
           content="Joseph Lynn, JavaScript, React, Web Development"

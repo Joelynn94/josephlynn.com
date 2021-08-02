@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import Alert from "./alert";
 import formStyles from "../styles/form.module.css";
 import buttonStyles from "../styles/button.module.css";
 
@@ -13,11 +14,28 @@ const Form = () => {
     },
     isSubmitted: false,
   });
+  const [alert, setAlert] = useState(null);
 
   const emailTest = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 
+  const alertTimer = (alert) => {
+    // how many seconds to display
+    let secondsLeft = 7;
+
+    // interval function set to messageTime and clear interval
+    const messageTime = setInterval(() => {
+      if (secondsLeft > 0) {
+        setAlert(alert);
+        secondsLeft--;
+      } else {
+        setAlert("");
+        clearInterval(messageTime);
+      }
+    }, 1000);
+  };
+
   const handleInputChange = (e) => {
-    const { value, name } = e.target;
+    const { name, value } = e.target;
     const { formErrors } = formData;
 
     switch (name) {
@@ -31,6 +49,12 @@ const Form = () => {
         formErrors.email =
           !emailTest.test(value) && value.length > 0
             ? "Please enter a valid email address"
+            : "";
+        break;
+      case "message":
+        formErrors.message =
+          value.length < 2 && value.length > 0
+            ? "If you are adding a message, it must be a minimum of 2 characters"
             : "";
         break;
       default:
@@ -60,17 +84,11 @@ const Form = () => {
     // destrucuture formData
     const { formErrors, name, email, message } = formData;
 
-    const data = {
-      name,
-      email,
-      message,
-    };
-
     if (formIsValid(formErrors)) {
       setFormData({
-        name: data.name,
-        email: data.email,
-        message: data.message,
+        name,
+        email,
+        message,
         isSubmitted: true,
       });
     } else {
@@ -81,13 +99,21 @@ const Form = () => {
     fetch("/api/contact", {
       method: "POST",
       headers: {
+        Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+      }),
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.message);
+        if (data) {
+          console.log(data);
+          alertTimer(data.message);
+        }
       })
       .catch((error) => console.log(error));
 
@@ -106,6 +132,7 @@ const Form = () => {
 
   // destructure formErrors
   const { formErrors } = formData;
+  console.log(formData);
 
   return (
     <form className={formStyles.container}>
@@ -114,7 +141,7 @@ const Form = () => {
           htmlFor="name"
           className="block text-sm font-medium text-gray-400"
         >
-          Name
+          Name (required)
         </label>
         <input
           type="text"
@@ -132,7 +159,7 @@ const Form = () => {
           htmlFor="email"
           className="block text-sm font-medium text-gray-400"
         >
-          Email address
+          Email address (required)
         </label>
         <input
           type="email"
@@ -150,7 +177,7 @@ const Form = () => {
           htmlFor="message"
           className="block text-sm font-medium text-gray-400"
         >
-          Message
+          Message (optional)
         </label>
         <textarea
           type="text"
@@ -160,6 +187,7 @@ const Form = () => {
           value={formData.message}
           onChange={handleInputChange}
         />
+        {<small className={formStyles.error}>{formErrors.message}</small>}
       </div>
 
       <div className="mt-5">
@@ -170,6 +198,7 @@ const Form = () => {
         >
           Send Message
         </button>
+        {alert && <Alert>{alert}</Alert>}
       </div>
     </form>
   );
