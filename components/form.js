@@ -96,7 +96,7 @@ const Form = () => {
     }
 
     // if valid - submit the data
-    fetch("https://josephlynn.com/api/contact", {
+    fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -113,7 +113,10 @@ const Form = () => {
           alertTimer(data.message);
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error)
+        alertTimer(data.message)
+      }
 
     // then set form data back to original state
     setFormData({
