@@ -114,9 +114,9 @@ const Form = () => {
         }
       })
       .catch((error) => {
-        console.log(error)
-        alertTimer(data.message)
-      }
+        console.log(error);
+        alertTimer(error.message);
+      });
 
     // then set form data back to original state
     setFormData({
