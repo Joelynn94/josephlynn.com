@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { getSortedPostsData } from "../../lib/posts";
 import Layout from "../../components/layout";
 import Post from "../../components/post";
@@ -49,7 +50,10 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const tag = ({ relatedPosts }) => {
+const Tag = ({ relatedPosts }) => {
+  const router = useRouter();
+  const { tag } = router.query;
+
   return (
     <Layout>
       <Head>
@@ -73,4 +77,4 @@ const tag = ({ relatedPosts }) => {
   );
 };
 
-export default tag;
+export default Tag;
