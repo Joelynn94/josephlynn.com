@@ -96,7 +96,7 @@ const Form = () => {
     }
 
     // if valid - submit the data
-    fetch("/api/contact", {
+    fetch("https://josephlynn.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
