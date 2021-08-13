@@ -33,17 +33,6 @@ const home = ({ lastestPosts }) => {
       </section>
       <section className={utilStyles.section}>
         <h2 className={utilStyles.title}>
-          Latest Posts.
-          <Button buttonStyle={buttonStyles.secondary} href="/blog">
-            View All
-          </Button>
-        </h2>
-        {lastestPosts.map((post) => (
-          <Post key={post.id} post={post} />
-        ))}
-      </section>
-      <section className={utilStyles.section}>
-        <h2 className={utilStyles.title}>
           Projects.
           <Button buttonStyle={buttonStyles.secondary} href="/projects">
             View All
@@ -57,6 +46,17 @@ const home = ({ lastestPosts }) => {
               }
             })}
         </div>
+      </section>
+      <section className={utilStyles.section}>
+        <h2 className={utilStyles.title}>
+          Latest Posts.
+          <Button buttonStyle={buttonStyles.secondary} href="/blog">
+            View All
+          </Button>
+        </h2>
+        {lastestPosts.map((post) => (
+          <Post key={post.id} post={post} />
+        ))}
       </section>
       <section className={utilStyles.section}>
         <h2 className={utilStyles.title}>
