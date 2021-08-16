@@ -24,12 +24,22 @@ const Project = ({ project }) => {
         <p className={projectStyles.description}>{project.description}</p>
         <div className={projectStyles.buttons}>
           {project.github && (
-            <Button buttonStyle={buttonStyles.primary} href={project.github}>
+            <Button
+              buttonStyle={buttonStyles.primary}
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Source Code
             </Button>
           )}
           {project.link && (
-            <Button buttonStyle={buttonStyles.secondary} href={project.link}>
+            <Button
+              buttonStyle={buttonStyles.secondary}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Live Website
             </Button>
           )}

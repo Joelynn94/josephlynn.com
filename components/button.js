@@ -16,6 +16,8 @@ const Button = ({
   onClick,
   buttonStyle,
   href,
+  target,
+  rel,
   ...otherProps
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
@@ -31,8 +33,8 @@ const Button = ({
       href={href}
     >
       <a
-        target="_blank"
-        rel="noopener noreferrer"
+        target={target}
+        rel={rel}
         className={`${buttonStyles.btn} ${checkButtonStyle}`}
       >
         {children}
