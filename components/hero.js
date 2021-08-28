@@ -10,9 +10,7 @@ const Hero = ({ config }) => {
         <h2 className={heroStyles.subheading}>Frontend Web Developer</h2>
         <p className={heroStyles.blurb}>
           Based in Tampa, Florida - I enjoy solving business problems and
-          building web applications that have a great user experience. You can
-          see what I'm coding on GitHub, view my professional profile on
-          LinkedIn, or see what I am writing on my blog.
+          building web applications that have a great look (UI) and user experience (UX). See what I'm coding on GitHub, view my professional profile on LinkedIn, or check out what I am writing on my blog.
         </p>
         <UserLinks config={config} />
       </div>
