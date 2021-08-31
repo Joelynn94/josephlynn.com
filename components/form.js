@@ -1,5 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Alert from "./alert";
+import useFetch from "../lib/useFetch";
+import { validateEmail } from "../lib/validate";
+import useAlert from "../lib/useAlert";
 import formStyles from "../styles/form.module.css";
 import buttonStyles from "../styles/button.module.css";
 
@@ -14,25 +17,8 @@ const Form = () => {
     },
     isSubmitted: false,
   });
-  const [alert, setAlert] = useState(null);
-
-  const emailTest = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-
-  const alertTimer = (alert) => {
-    // how many seconds to display
-    let secondsLeft = 7;
-
-    // interval function set to messageTime and clear interval
-    const messageTime = setInterval(() => {
-      if (secondsLeft > 0) {
-        setAlert(alert);
-        secondsLeft--;
-      } else {
-        setAlert("");
-        clearInterval(messageTime);
-      }
-    }, 1000);
-  };
+  const { post } = useFetch("https://josephlynn.com/api");
+  const { alert, alertMessage } = useAlert();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -47,7 +33,7 @@ const Form = () => {
         break;
       case "email":
         formErrors.email =
-          !emailTest.test(value) && value.length > 0
+          !validateEmail(value) && value.length > 0
             ? "Please enter a valid email address"
             : "";
         break;
@@ -67,56 +53,54 @@ const Form = () => {
     }));
   };
 
-  const formIsValid = (formInfo) => {
-    let valid = true;
-
-    Object.values(formInfo).forEach((val) => {
-      if (val.length > 0) {
-        valid = false;
-      }
-    });
-
-    return valid;
-  };
-
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // destrucuture formData
-    const { formErrors, name, email, message } = formData;
+    const { name, email } = formData;
 
-    if (formIsValid(formErrors)) {
-      setFormData({
-        name,
-        email,
-        message,
-        isSubmitted: true,
-      });
-    } else {
+    try {
+      // if valid - submit the data
+      if (!name) {
+        alertMessage("Name field cannot be empty");
+        return;
+      }
+
+      if (!email) {
+        alertMessage("Email field cannot be empty");
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        alertMessage("Please enter a valid email address");
+        return;
+      }
+
+      post("/contact", {
+        ...formData,
+      })
+        .then((data) => {
+          if (data) {
+            alertMessage(data.message);
+          }
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+            formErrors: {
+              name: "",
+              email: "",
+            },
+            isSubmitted: false,
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+          alertMessage(error.message);
+        });
+    } catch (error) {
+      alertMessage("Name or Email Address fields are empty");
       return;
     }
-
-    // if valid - submit the data
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        message,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data) {
-          alertTimer(data.message);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        alertTimer(error.message);
-      });
 
     // then set form data back to original state
     setFormData({
@@ -195,6 +179,7 @@ const Form = () => {
           type="submit"
           className={`${buttonStyles.btn} ${buttonStyles.primary}`}
           onClick={handleFormSubmit}
+          disabled={!formData.name || !formData.email}
         >
           Send Message
         </button>

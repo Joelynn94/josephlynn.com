@@ -21,7 +21,6 @@ export default async function handler(req, res) {
       .send(msg)
       .then((data) => {
         console.log("Email sent");
-        console.log(data);
       })
       .catch((error) => {
         console.error(error);
