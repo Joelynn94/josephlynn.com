@@ -17,7 +17,7 @@ const Form = () => {
     },
     isSubmitted: false,
   });
-  const { post } = useFetch("https://josephlynn.com/api");
+  const { post } = useFetch("/api");
   const { alert, alertMessage } = useAlert();
 
   const handleInputChange = (e) => {
