@@ -39,7 +39,7 @@ const grades = [50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
 // 2. return an array of grades that are 90 or greater
 ```
 
-Reference: [MDN docs: Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+[MDN docs - Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
 ## Array.find(callback)
 
@@ -71,7 +71,7 @@ const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // 2. return the id 7
 ```
 
-Reference: [MDN docs: Array.prototype.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+[MDN docs - Array.prototype.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
 ## Array.includes(item)
 
@@ -97,7 +97,7 @@ const groceries = ["apples", "bananas", "bread", "milk"];
 // 1. console.log passing in a string argument to includes()
 ```
 
-Reference: [MDN docs: Array.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+[MDN docs - Array.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 
 ## Array.indexOf(item)
 
@@ -120,7 +120,7 @@ const groceries = ["apples", "bananas", "bread", "milk"];
 // 1. console.log passing in a string argument to indexOf()
 ```
 
-Reference: [MDN docs: Array.prototype.indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+[MDN docs - Array.prototype.indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
 ## Array.every(callback)
 
@@ -138,7 +138,7 @@ console.log(allAbove10); // => true
 console.log(allAbove15); // => false
 ```
 
-Reference: [MDN docs: Array.prototype.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+[MDN docs - Array.prototype.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 
 ## Array.some(callback)
 
@@ -160,7 +160,7 @@ console.log(someOver18); // => true
 console.log(someUnder10); // => false
 ```
 
-Reference: [MDN docs: Array.prototype.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+[MDN docs - Array.prototype.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 
 ## Array.map(callback)
 
@@ -193,7 +193,7 @@ const names = ["joe", "sierra", "norah", "oliver"];
 // 2. return the lowercased names
 ```
 
-Reference: [MDN docs: Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+[MDN docs - Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ## Array.forEach(callback)
 
@@ -243,4 +243,4 @@ const numbers = [10, 15, 20, 25, 30, 35, 40, 45, 50];
 // 5. return the sum
 ```
 
-Reference: [MDN docs: Array.prototype.forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+[MDN docs - Array.prototype.forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
