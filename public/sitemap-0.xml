@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://www.josephlynn.com</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/blog</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/projects</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/javascript</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/react</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/api</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/snippet</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/objects</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/arrays</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/todoapp</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/fetch</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/localstorage</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/classes</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/oop</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/inheritance</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/tags/beginners</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/8-javascript-array-methods-you-should-know</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/api-requests-in-react-using-fetch</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/how-to-build-a-react-crud-todo-app-add-todos</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/how-to-build-a-react-crud-todo-app-delete-todo</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/how-to-build-a-react-crud-todo-app-edit-todo</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/how-to-build-a-react-crud-todo-app-localstorage</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/how-to-build-a-react-crud-todo-app-refactor</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/javascript-classes-explained</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/javascript-prototypal-inheritance</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/optional-chaining-objects-and-arrays</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/react-hooks-working-with-state-array-of-objects</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/react-hooks-working-with-state-arrays</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/react-hooks-working-with-state-objects</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/react-hooks-working-with-useeffect-lifecycle</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/working-with-arrays-in-javascript-for-beginners-removing-values</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.josephlynn.com/posts/working-with-arrays-in-javascript</loc><lastmod>2022-06-11T17:10:15.852Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

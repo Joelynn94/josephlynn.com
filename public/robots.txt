@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.josephlynn.com/
+
+# Sitemaps
+Sitemap: https://www.josephlynn.com/sitemap.xml
