@@ -1,5 +1,5 @@
 ---
-title: "Working with Arrays in JavaScript for beginners - Adding values"
+title: "JavaScript arrays for beginners - Adding values"
 date: "2020-05-16"
 tags: ["javascript", "arrays"]
 excerpt: "In this post I will be showing you how to use a couple different methods to add new values to arrays using JavaScript."

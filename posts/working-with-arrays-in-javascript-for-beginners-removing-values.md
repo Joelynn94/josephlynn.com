@@ -1,5 +1,5 @@
 ---
-title: "Working with Arrays in JavaScript for beginners - Removing values"
+title: "JavaScript arrays for beginners - Removing values"
 date: "2020-06-25"
 tags: ["javascript", "arrays", "beginners"]
 excerpt: "In this post I will be showing you how to use a couple different methods to remove existing values from arrays using JavaScript."
