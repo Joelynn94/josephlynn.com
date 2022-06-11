@@ -2,7 +2,7 @@
 title: "How to build a React CRUD todo app (delete todo)"
 date: "2021-05-19"
 tags: ["javascript", "react", "todoapp"]
-excerpt: "As part of the series, "Build a CRUD todo application". In this post I will show you how to delete the todo items using React."
+excerpt: "As part of the series, Build a CRUD todo application. In this post I will show you how to delete the todo items using React."
 ---
 
 In this series, we will build a todo application.

@@ -2,7 +2,7 @@
 title: "How to build a React CRUD todo app (add localstorage)"
 date: "2021-05-18"
 tags: ["javascript", "react", "todoapp", "localstorage"]
-excerpt: "As part of the series, "Build a CRUD todo application". In this post I will show you how to add lazy localstorage to save our todo items using React."
+excerpt: "As part of the series, Build a CRUD todo application. In this post I will show you how to add lazy localstorage to save our todo items using React."
 ---
 
 In this series, we will build a todo application.

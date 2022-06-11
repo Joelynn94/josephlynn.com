@@ -2,7 +2,7 @@
 title: "How to build a React CRUD todo app (refactor) "
 date: "2021-05-23"
 tags: ["javascript", "react", "todoapp"]
-excerpt: "As part of the series, "Build a CRUD todo application". In this post I will show you we can refactor the todo app we built through this series."
+excerpt: "As part of the series, Build a CRUD todo application. In this post I will show you we can refactor the todo app we built through this series."
 ---
 
 In this series, we have built a todo application.

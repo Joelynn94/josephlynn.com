@@ -2,7 +2,7 @@
 title: "How to build a React CRUD todo app (edit todo)"
 date: "2021-05-20"
 tags: ["javascript", "react", "todoapp"]
-excerpt: "As part of the series, "Build a CRUD todo application". In this post I will show you how to edit the todo items using React."
+excerpt: "As part of the series, Build a CRUD todo application. In this post I will show you how to edit the todo items using React."
 ---
 
 In this series, we will build a todo application.
