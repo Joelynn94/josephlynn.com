@@ -57,7 +57,19 @@ const Tag = ({ relatedPosts }) => {
 	return (
 		<Layout>
 			<Head>
-				<title>Joseph Lynn | Tag: {tag}</title>
+				<meta
+					name="description"
+					content={`This page shows a list of all other posts listed on this website related to the tag you searched for: ${tag}. There are ${relatedPosts.length} related to the tag you search for: ${tag}.`}
+				/>
+				<meta
+					name="og:title"
+					content={`This page shows a list of all other posts listed on this website related to the tag you searched for: ${tag}. There are ${relatedPosts.length} related to the tag you search for: ${tag}.`}
+				/>
+				<meta
+					name="twitter:description"
+					content={`This page shows a list of all other posts listed on this website related to the tag you searched for: ${tag}. There are ${relatedPosts.length} related to the tag you search for: ${tag}.`}
+				/>
+				<title>Joseph Lynn | Posts Related To Tag: {tag}</title>
 			</Head>
 			<header className={`${utilStyles.section} py-8`}>
 				<h2>Posts tagged: {tag}</h2>
@@ -68,7 +80,7 @@ const Tag = ({ relatedPosts }) => {
 				</h3>
 			</header>
 			<section className={utilStyles.section}>
-				<h1 className={utilStyles.title}>Related Posts: {tag}</h1>
+				<h1 className={utilStyles.title}>Posts Related To: {tag}</h1>
 				{relatedPosts.map((post) => (
 					<Post key={post.id} post={post} />
 				))}
