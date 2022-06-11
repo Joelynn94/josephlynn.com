@@ -2,7 +2,7 @@
 title: "React hooks - working with state (arrays)"
 date: "2021-05-14"
 tags: ["javascript", "react", "arrays"]
-excerpt: "To keep track of the state, we need to call the useState hook with an initial value. Since useState returns an array we are able to destructure the current state value and a function that lets you update the state."
+excerpt: "To keep track of the state, we need to use the useState hook with an initial value. The initial value will typically be the data type you will be using. In this case we are using an empty array to declare the initial value."
 ---
 
 ## How to declare initial state
@@ -77,24 +77,24 @@ You see we declared a function called "handleAddUser". That function doesn't exi
 ```js
 // delcare the function
 function handleAddUserId() {
-  // it's important to not mutate state directly, so here we are creating a copy of the current state using the spread syntax
-  const updateUsers = [
-    // copy the current users state
-    // you can also clone an array using users.slice() (see below)
-    ...users,
-    // for simplistic purposes, we are just adding the new length of the array
-    users.length + 1,
-  ];
-  // // updated the state to the updatedUsers
-  setUsers(updateUsers);
+	// it's important to not mutate state directly, so here we are creating a copy of the current state using the spread syntax
+	const updateUsers = [
+		// copy the current users state
+		// you can also clone an array using users.slice() (see below)
+		...users,
+		// for simplistic purposes, we are just adding the new length of the array
+		users.length + 1,
+	];
+	// // updated the state to the updatedUsers
+	setUsers(updateUsers);
 
-  // array.slice method
-  // create a copy of the users array
-  const updatedArray = users.slice();
-  // push the new length value to the copied array
-  updatedArray.push(users.length + 1);
-  // set the new state
-  setUsers(updatedArray);
+	// array.slice method
+	// create a copy of the users array
+	const updatedArray = users.slice();
+	// push the new length value to the copied array
+	updatedArray.push(users.length + 1);
+	// set the new state
+	setUsers(updatedArray);
 }
 ```
 

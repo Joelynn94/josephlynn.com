@@ -2,7 +2,7 @@
 title: "React hooks - working with state (objects)"
 date: "2021-05-13"
 tags: ["javascript", "react", "objects"]
-excerpt: "To keep track of the state, we need to call the useState hook with an initial value. Since useState returns an array we are able to destructure the current state value and a function that lets you update the state."
+excerpt: "To keep track of the state, we need to use the useState hook with an initial value. The initial value will typically be the data type you will be using. In this case we are using an empty object to declare the initial value."
 ---
 
 ## How to declare initial state
@@ -35,11 +35,11 @@ import React, { useState } from "react";
 
 // component function
 function SimpleObjectComponent() {
-  // set the initial state (an object with the properties we want since we know that's what we want the user variable value to start as)
-  const [user, setUser] = useState({
-    id: 1,
-    name: "",
-  });
+	// set the initial state (an object with the properties we want since we know that's what we want the user variable value to start as)
+	const [user, setUser] = useState({
+		id: 1,
+		name: "",
+	});
 }
 
 export default SimpleObjectComponent;
@@ -50,13 +50,13 @@ Let's add a basic button to change the state and a spot in the DOM to see the st
 ```js
 // JSX we want to return
 return (
-  // parent div to hold the button and h1
-  <div className="App">
-    {/* Get the value of user.name */}
-    <h1>{user.name}</h1>
-    {/* Call the handleNameChange function when the button is clicked */}
-    <button onClick={handleNameChange}>Change name</button>
-  </div>
+	// parent div to hold the button and h1
+	<div className="App">
+		{/* Get the value of user.name */}
+		<h1>{user.name}</h1>
+		{/* Call the handleNameChange function when the button is clicked */}
+		<button onClick={handleNameChange}>Change name</button>
+	</div>
 );
 ```
 
@@ -70,24 +70,24 @@ You see we declared a function called "handleNameChange". That function doesn't 
 ```js
 // delcare the function
 function handleNameChange() {
-  // create a variable that produces a new value so we can use that new value to update state
-  const updateItem = {
-    // it's important to not mutate state directly, so here we are creating a copy of the current state using the spread syntax
-    // you can also clone an object using Object.assign({}, user) (see below)
-    ...user,
-    // after we copy the state, we can add new properties and/or new values to the copied state
-    name: "Joe",
-  };
-  // no we want to update the state with the new value we created
-  setUser(updateItem);
+	// create a variable that produces a new value so we can use that new value to update state
+	const updateItem = {
+		// it's important to not mutate state directly, so here we are creating a copy of the current state using the spread syntax
+		// you can also clone an object using Object.assign({}, user) (see below)
+		...user,
+		// after we copy the state, we can add new properties and/or new values to the copied state
+		name: "Joe",
+	};
+	// no we want to update the state with the new value we created
+	setUser(updateItem);
 
-  // Object.assign method
-  // create a copy of the user object
-  const updatedObject = Object.assign({}, user);
-  // change the copied object property "name"
-  updatedObject.name = "Joe";
-  // set the new state
-  setUser(updatedObject);
+	// Object.assign method
+	// create a copy of the user object
+	const updatedObject = Object.assign({}, user);
+	// change the copied object property "name"
+	updatedObject.name = "Joe";
+	// set the new state
+	setUser(updatedObject);
 }
 ```
 
