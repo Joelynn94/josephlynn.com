@@ -1,14 +1,6 @@
 const withImages = require("next-images");
 module.exports = withImages();
 
-const ContentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self';
-  child-src josephlynn.com;
-  style-src 'self' josephlynn.com;
-  font-src 'self';  
-`;
-
 const securityHeaders = [
 	{
 		key: "Strict-Transport-Security",
@@ -17,10 +9,6 @@ const securityHeaders = [
 	{
 		key: "X-XSS-Protection",
 		value: "1; mode=block",
-	},
-	{
-		key: "Content-Security-Policy",
-		value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
 	},
 	{
 		key: "X-Content-Type-Options",
