@@ -31,8 +31,6 @@ useEffect(() => {
 
 Sometimes you will need to cleanup an effect to avoid a memory leak. React performs the cleanup after the component unmounts.
 
-## Component Lifecycle
-
 ### 1. Once, after component is added to the DOM (mounted)
 
 To run an effect after a component has mounted, add a dependency array.
