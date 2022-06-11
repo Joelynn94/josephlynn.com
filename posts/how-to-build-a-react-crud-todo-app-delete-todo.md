@@ -2,7 +2,7 @@
 title: "How to build a React CRUD todo app (delete todo)"
 date: "2021-05-19"
 tags: ["javascript", "react", "todoapp"]
-excerpt: "In this series, we will build a CRUD todo application. In this post I will show you how to delete todo items."
+excerpt: "As part of the series, "Build a CRUD todo application". In this post I will show you how to delete the todo items using React."
 ---
 
 In this series, we will build a todo application.
@@ -20,13 +20,13 @@ Here we are going to create the function we want to fire on a button click to re
 ```js
 // function to remove a todo item from the todo array
 function handleDeleteClick(id) {
-  // here we are filtering - the idea is remove an item from the todo array on a button click
-  const removeItem = todos.filter((todo) => {
-    // return the rest of the todos that don't match the item we are deleting
-    return todo.id !== id;
-  });
-  // removeItem returns a new array - so now we are setting the todos to the new array
-  setTodos(removeItem);
+	// here we are filtering - the idea is remove an item from the todo array on a button click
+	const removeItem = todos.filter((todo) => {
+		// return the rest of the todos that don't match the item we are deleting
+		return todo.id !== id;
+	});
+	// removeItem returns a new array - so now we are setting the todos to the new array
+	setTodos(removeItem);
 }
 ```
 
@@ -36,24 +36,24 @@ Lets add a very basic button to the JSX.
 
 ```js
 {
-  /* create a ul to hold all of the list items */
+	/* create a ul to hold all of the list items */
 }
 <ul className="todo-list">
-  {/* map over the todos array which creates a new li element for every todo
+	{/* map over the todos array which creates a new li element for every todo
       (make sure to add the "key" prop using the unique todo.id value to the li element)
       remember this is an array of objects - so we need to access the property 
       "text" to get the value we want to display */}
-  {todos.map((todo) => (
-    // now we are adding a simple button that we can click on
-    <li key={todo.id}>
-      {/* Add the function we created above as the onClick handler 
+	{todos.map((todo) => (
+		// now we are adding a simple button that we can click on
+		<li key={todo.id}>
+			{/* Add the function we created above as the onClick handler 
           rememebr the handleDeletClick function needs to know which item we want to remove 
           so we need to pass the todo.id to the function - also on a side note,
           notice how we are calling the handleDeleteClick function, this makes sure we are not
           running the function on page load, but rather when the button is clicked */}
-      {todo.text} <button onClick={() => handleDeleteClick(todo.id)}>X</button>
-    </li>
-  ))}
+			{todo.text} <button onClick={() => handleDeleteClick(todo.id)}>X</button>
+		</li>
+	))}
 </ul>;
 ```
 
@@ -68,69 +68,71 @@ import { useEffect, useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  const [todos, setTodos] = useState(() => {
-    const savedTodos = localStorage.getItem("todos");
-    if (savedTodos) {
-      return JSON.parse(savedTodos);
-    } else {
-      return [];
-    }
-  });
-  const [todo, setTodo] = useState("");
+	const [todos, setTodos] = useState(() => {
+		const savedTodos = localStorage.getItem("todos");
+		if (savedTodos) {
+			return JSON.parse(savedTodos);
+		} else {
+			return [];
+		}
+	});
+	const [todo, setTodo] = useState("");
 
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
+	useEffect(() => {
+		localStorage.setItem("todos", JSON.stringify(todos));
+	}, [todos]);
 
-  function handleInputChange(e) {
-    setTodo(e.target.value);
-  }
+	function handleInputChange(e) {
+		setTodo(e.target.value);
+	}
 
-  function handleFormSubmit(e) {
-    e.preventDefault();
+	function handleFormSubmit(e) {
+		e.preventDefault();
 
-    if (todo !== "") {
-      setTodos([
-        ...todos,
-        {
-          id: todos.length + 1,
-          text: todo.trim(),
-        },
-      ]);
-    }
+		if (todo !== "") {
+			setTodos([
+				...todos,
+				{
+					id: todos.length + 1,
+					text: todo.trim(),
+				},
+			]);
+		}
 
-    setTodo("");
-  }
+		setTodo("");
+	}
 
-  function handleDeleteClick(id) {
-    const removeItem = todos.filter((todo) => {
-      return todo.id !== id;
-    });
-    setTodos(removeItem);
-  }
+	function handleDeleteClick(id) {
+		const removeItem = todos.filter((todo) => {
+			return todo.id !== id;
+		});
+		setTodos(removeItem);
+	}
 
-  return (
-    <div className="App">
-      <form onSubmit={handleFormSubmit}>
-        <input
-          name="todo"
-          type="text"
-          placeholder="Create a new todo"
-          value={todo}
-          onChange={handleInputChange}
-        />
-      </form>
+	return (
+		<div className="App">
+			<form onSubmit={handleFormSubmit}>
+				<input
+					name="todo"
+					type="text"
+					placeholder="Create a new todo"
+					value={todo}
+					onChange={handleInputChange}
+				/>
+			</form>
 
-      <ul className="todo-list">
-        {todos.map((todo) => (
-          <li key={todo.id}>
-            {todo.text}{" "}
-            <button onClick={() => handleDeleteClick(todo.id)}>X</button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+			<ul className="todo-list">
+				{todos.map((todo) => (
+					<li key={todo.id}>
+						{todo.text}{" "}
+						<button onClick={() => handleDeleteClick(todo.id)}>
+							X
+						</button>
+					</li>
+				))}
+			</ul>
+		</div>
+	);
 }
 ```
 

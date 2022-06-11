@@ -2,7 +2,7 @@
 title: "How to build a React CRUD todo app (refactor) "
 date: "2021-05-23"
 tags: ["javascript", "react", "todoapp"]
-excerpt: "In this series, we will build a CRUD todo application. In this post I will show you we can refactor the todo app we built through this series."
+excerpt: "As part of the series, "Build a CRUD todo application". In this post I will show you we can refactor the todo app we built through this series."
 ---
 
 In this series, we have built a todo application.
@@ -13,8 +13,8 @@ In the previous posts, added the ability to edit todos. We have full CRUD functi
 
 There are a couple benefits of breaking up components:
 
-- Reusability - you are able to use a component anywhere in the application.
-- Isolation - it's helps with isolating bugs found in your code.
+-   Reusability - you are able to use a component anywhere in the application.
+-   Isolation - it's helps with isolating bugs found in your code.
 
 **_This is known as abstraction_**
 
@@ -22,8 +22,8 @@ There are a couple benefits of breaking up components:
 
 Start by moving the todo item to it's own component.
 
-- Create a new file called `TodoItem.js`. ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yiu8qw6z26dd3htym6gp.png)
-- Add the `li` item from the `App.js` file ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tlrrdmtj4h8xwr1yiyeu.png)
+-   Create a new file called `TodoItem.js`. ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yiu8qw6z26dd3htym6gp.png)
+-   Add the `li` item from the `App.js` file ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tlrrdmtj4h8xwr1yiyeu.png)
 
 We are going to change the names of props that are functions. It's standard convention to change the name for props that are functions to start with `onSubjectEvent`. The `TodoItem.js` should look like this.
 
@@ -32,111 +32,111 @@ We are going to change the names of props that are functions. It's standard conv
 // bring in props instead and then just add `props.` to todo, onEditClick and onDeleteClick:
 // export default function TodoItem(props)
 export default function TodoItem({
-  // passing the todo as a prop
-  todo,
-  // notice the name change of the function handleEditClick to onEditClick
-  onEditClick,
-  // notice the name change of the function handleDeleteClick to onDeleteClick
-  onDeleteClick,
+	// passing the todo as a prop
+	todo,
+	// notice the name change of the function handleEditClick to onEditClick
+	onEditClick,
+	// notice the name change of the function handleDeleteClick to onDeleteClick
+	onDeleteClick,
 }) {
-  return (
-    // using the li element as the parent
-    <li key={todo.id}>
-      {todo.text}
-      {/* don't forget to change the name of the functions */}
-      <button onClick={() => onEditClick(todo)}>Edit</button>
-      <button onClick={() => onDeleteClick(todo.id)}>Delete</button>
-    </li>
-  );
+	return (
+		// using the li element as the parent
+		<li key={todo.id}>
+			{todo.text}
+			{/* don't forget to change the name of the functions */}
+			<button onClick={() => onEditClick(todo)}>Edit</button>
+			<button onClick={() => onDeleteClick(todo.id)}>Delete</button>
+		</li>
+	);
 }
 ```
 
-- Import the `TodoItem` component into the `App.js`![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b43umjsn0netoct6cqos.png)
-- Use the `TodoItem` and pass the required props to it ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/32zlzoodcgr96ifd1rr6.png)
+-   Import the `TodoItem` component into the `App.js`![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b43umjsn0netoct6cqos.png)
+-   Use the `TodoItem` and pass the required props to it ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/32zlzoodcgr96ifd1rr6.png)
 
 ## 2. Refactor add todo form to it's own component
 
 Start by moving the form for to add a new todo into a new file.
 
-- Create a new file called `AddTodoForm.js` ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uka9iqjwcieoy3rtover.png)
-- Add the `form` element to add a new todo from the `App.js` file to our new `AddTodoForm.js` file ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/egzbk9yd3bpqm4z1wtav.png)
+-   Create a new file called `AddTodoForm.js` ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uka9iqjwcieoy3rtover.png)
+-   Add the `form` element to add a new todo from the `App.js` file to our new `AddTodoForm.js` file ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/egzbk9yd3bpqm4z1wtav.png)
 
 Again, we are going to change the names of props that are functions. The `AddTodoForm.js` should look like this.
 
 ```js
 export default function AddTodoForm({
-  // passing the todo as a prop
-  todo,
-  // notice the name change of the function handleAddFormSubmit to onAddFormSubmit
-  onAddFormSubmit,
-  // notice the name change of the function handleAddInputChange to onAddInputChange
-  onAddInputChange,
+	// passing the todo as a prop
+	todo,
+	// notice the name change of the function handleAddFormSubmit to onAddFormSubmit
+	onAddFormSubmit,
+	// notice the name change of the function handleAddInputChange to onAddInputChange
+	onAddInputChange,
 }) {
-  return (
-    // using the form element as the parent
-    // notice the change for the function names in the onSubmit and onChange props
-    <form onSubmit={onAddFormSubmit}>
-      <h2>Add Todo</h2>
-      <label htmlFor="todo">Create todo: </label>
-      <input
-        name="todo"
-        type="text"
-        placeholder="Create new todo"
-        value={todo}
-        onChange={onAddInputChange}
-      />
-    </form>
-  );
+	return (
+		// using the form element as the parent
+		// notice the change for the function names in the onSubmit and onChange props
+		<form onSubmit={onAddFormSubmit}>
+			<h2>Add Todo</h2>
+			<label htmlFor="todo">Create todo: </label>
+			<input
+				name="todo"
+				type="text"
+				placeholder="Create new todo"
+				value={todo}
+				onChange={onAddInputChange}
+			/>
+		</form>
+	);
 }
 ```
 
-- Import the `AddTodoForm` component into the `App.js` file ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2rxlrfglcbuhaweopkq4.png)
-- Use the `AddTodoForm.js` and pass the required props to it ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s44ug9mnwbbbkckvccn0.png)
+-   Import the `AddTodoForm` component into the `App.js` file ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2rxlrfglcbuhaweopkq4.png)
+-   Use the `AddTodoForm.js` and pass the required props to it ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s44ug9mnwbbbkckvccn0.png)
 
 ## 3. Refactor add edit form to it's own component
 
 Start by moving the form for to edit a todo into a new file.
 
-- Create a new file called `EditForm.js` ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d183wq9ruqhhiichucz3.png)
-- Add the `form` element to edit a todo from the `App.js` file to our new `EditForm.js` file
+-   Create a new file called `EditForm.js` ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d183wq9ruqhhiichucz3.png)
+-   Add the `form` element to edit a todo from the `App.js` file to our new `EditForm.js` file
 
 As a reminder, we are going to change the names of props that are functions. The `EditForm.js` should look like this.
 
 ```js
 export default function EditForm({
-  // still need the currentTodo
-  currentTodo,
-  // also need to be able to toggle setIsEditing
-  setIsEditing,
-  // notice the name change of the function handleEditInputChange to onEditInputChange
-  onEditInputChange,
-  // notice the name change of the function handleEditFormSubmit to onEditFormSubmit
-  onEditFormSubmit,
+	// still need the currentTodo
+	currentTodo,
+	// also need to be able to toggle setIsEditing
+	setIsEditing,
+	// notice the name change of the function handleEditInputChange to onEditInputChange
+	onEditInputChange,
+	// notice the name change of the function handleEditFormSubmit to onEditFormSubmit
+	onEditFormSubmit,
 }) {
-  return (
-    // using the form element as the parent
-    // notice the change for the function names in the onSubmit and onChange props
-    <form onSubmit={onEditFormSubmit}>
-      <h2>Edit Todo</h2>
-      <label htmlFor="updateTodo">Update todo: </label>
-      <input
-        name="updateTodo"
-        type="text"
-        placeholder="Update todo"
-        value={currentTodo.text}
-        onChange={onEditInputChange}
-      />
-      <button type="submit" onClick={onEditFormSubmit}>
-        Update
-      </button>
-      <button onClick={() => setIsEditing(false)}>Cancel</button>
-    </form>
-  );
+	return (
+		// using the form element as the parent
+		// notice the change for the function names in the onSubmit and onChange props
+		<form onSubmit={onEditFormSubmit}>
+			<h2>Edit Todo</h2>
+			<label htmlFor="updateTodo">Update todo: </label>
+			<input
+				name="updateTodo"
+				type="text"
+				placeholder="Update todo"
+				value={currentTodo.text}
+				onChange={onEditInputChange}
+			/>
+			<button type="submit" onClick={onEditFormSubmit}>
+				Update
+			</button>
+			<button onClick={() => setIsEditing(false)}>Cancel</button>
+		</form>
+	);
 }
 ```
 
-- Import `EditForm.js` component into the `App.js` file ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cc1su9ezzjodxj90ooc2.png)
-- Use the `EditForm.js` and pass the required props to it ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uuymx0y60jttjli9grz1.png)
+-   Import `EditForm.js` component into the `App.js` file ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cc1su9ezzjodxj90ooc2.png)
+-   Use the `EditForm.js` and pass the required props to it ![alt text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uuymx0y60jttjli9grz1.png)
 
 ## 4. Put it all together
 
@@ -262,23 +262,23 @@ export default function App() {
 ```js
 // AddForm.js
 export default function AddTodoForm({
-  todo,
-  onAddFormSubmit,
-  onAddInputChange,
+	todo,
+	onAddFormSubmit,
+	onAddInputChange,
 }) {
-  return (
-    <form onSubmit={onAddFormSubmit}>
-      <h2>Add Todo</h2>
-      <label htmlFor="todo">Create todo: </label>
-      <input
-        name="todo"
-        type="text"
-        placeholder="Create new todo"
-        value={todo}
-        onChange={onAddInputChange}
-      />
-    </form>
-  );
+	return (
+		<form onSubmit={onAddFormSubmit}>
+			<h2>Add Todo</h2>
+			<label htmlFor="todo">Create todo: </label>
+			<input
+				name="todo"
+				type="text"
+				placeholder="Create new todo"
+				value={todo}
+				onChange={onAddInputChange}
+			/>
+		</form>
+	);
 }
 ```
 
@@ -287,28 +287,28 @@ export default function AddTodoForm({
 ```js
 // EditForm.js
 export default function EditForm({
-  currentTodo,
-  setIsEditing,
-  onEditInputChange,
-  onEditFormSubmit,
+	currentTodo,
+	setIsEditing,
+	onEditInputChange,
+	onEditFormSubmit,
 }) {
-  return (
-    <form onSubmit={onEditFormSubmit}>
-      <h2>Edit Todo</h2>
-      <label htmlFor="updateTodo">Update todo: </label>
-      <input
-        name="updateTodo"
-        type="text"
-        placeholder="Update todo"
-        value={currentTodo.text}
-        onChange={onEditInputChange}
-      />
-      <button type="submit" onClick={onEditFormSubmit}>
-        Update
-      </button>
-      <button onClick={() => setIsEditing(false)}>Cancel</button>
-    </form>
-  );
+	return (
+		<form onSubmit={onEditFormSubmit}>
+			<h2>Edit Todo</h2>
+			<label htmlFor="updateTodo">Update todo: </label>
+			<input
+				name="updateTodo"
+				type="text"
+				placeholder="Update todo"
+				value={currentTodo.text}
+				onChange={onEditInputChange}
+			/>
+			<button type="submit" onClick={onEditFormSubmit}>
+				Update
+			</button>
+			<button onClick={() => setIsEditing(false)}>Cancel</button>
+		</form>
+	);
 }
 ```
 
@@ -317,13 +317,13 @@ export default function EditForm({
 ```js
 // TodoItem.js
 export default function TodoItem({ todo, onEditClick, onDeleteClick }) {
-  return (
-    <li key={todo.id}>
-      {todo.text}
-      <button onClick={() => onEditClick(todo)}>Edit</button>
-      <button onClick={() => onDeleteClick(todo.id)}>Delete</button>
-    </li>
-  );
+	return (
+		<li key={todo.id}>
+			{todo.text}
+			<button onClick={() => onEditClick(todo)}>Edit</button>
+			<button onClick={() => onDeleteClick(todo.id)}>Delete</button>
+		</li>
+	);
 }
 ```
 
