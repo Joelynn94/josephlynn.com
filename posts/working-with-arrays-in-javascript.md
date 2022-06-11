@@ -2,7 +2,7 @@
 title: "Working with Arrays in JavaScript for beginners - Adding values"
 date: "2020-05-16"
 tags: ["javascript", "arrays"]
-excerpt: "In this post I will be showing you a couple methods to add new values to arrays using JavaScript."
+excerpt: "In this post I will be showing you how to use a couple different methods to add new values to arrays using JavaScript."
 ---
 
 I recently finished (May 2020) the coding bootcamp I started back in October 2019. Now I am going back through materials to make sure I understand the fundamentals. I will be showing you a couple ways to add values to arrays. Here is my attempt to show you how to work with basic arrays.
