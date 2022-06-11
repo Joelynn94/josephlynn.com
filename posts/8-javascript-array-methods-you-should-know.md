@@ -24,7 +24,7 @@ the item will **NOT** be included in the final array.
 const grades = [50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
 
 const passingGrades = grades.filter((grade) => {
-  return grade >= 70;
+	return grade >= 70;
 });
 
 console.log(passingGrades); // => [70, 75, 80, 85, 90, 95, 100]
@@ -56,7 +56,7 @@ you specify. If no items were found, you will get back undefined.
 const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const findId5 = ids.find((id) => {
-  return id === 5;
+	return id === 5;
 });
 
 console.log(findId5); // => 5
@@ -178,7 +178,7 @@ otherwise you will get back undefined.
 const names = ["joe", "sierra", "norah", "oliver"];
 
 const upperCaseNames = names.map((name) => {
-  return name.toUpperCase();
+	return name.toUpperCase();
 });
 
 console.log(upperCaseNames); // => ["JOE", "SIERRA", "NORAH", "OLIVER"]
@@ -209,7 +209,7 @@ callback function and pass to it the correct value.
 const numbers = [10, 15, 20, 25, 30, 35, 40, 45, 50];
 
 const eachNumber = numbers.forEach((number) => {
-  console.log(number);
+	console.log(number);
 });
 
 console.log(eachNumber);
@@ -219,13 +219,13 @@ console.log(eachNumber);
 const numbers = [10, 15, 20, 25, 30, 35, 40, 45, 50];
 
 function sumNumbers(numbers) {
-  let sum = 0;
-  numbers.forEach((number) => {
-    if (number % 2 !== 0) {
-      sum += number;
-    }
-  });
-  return sum;
+	let sum = 0;
+	numbers.forEach((number) => {
+		if (number % 2 !== 0) {
+			sum += number;
+		}
+	});
+	return sum;
 }
 
 console.log(sumNumbers(numbers)); // => 120
