@@ -1,25 +1,35 @@
 .container {
-  @apply grid justify-items-center items-center gap-6;
+	@apply grid justify-items-center items-center gap-6;
 }
 
 .subheading {
-  @apply text-coolGray-300;
+	@apply text-coolGray-300;
 }
 
 .blurb {
-  @apply mb-4;
+	@apply mb-4;
+}
+
+.cta {
+	@apply w-full lg:w-1/2 cursor-pointer p-0 border-2
+  border-solid border-transparent transition duration-300 ease-in-out
+  font-medium flex items-center justify-center text-base py-2 px-3 hover:no-underline bg-primary-100 text-secondary-900;
+}
+
+.cta:hover {
+	@apply bg-transparent border-primary-100 text-coolGray-50;
 }
 
 .img-wrapper {
-  @apply w-2/3 md:w-full flex justify-center content-center;
+	@apply w-2/3 md:w-full flex justify-center content-center;
 }
 
 .img {
-  @apply rounded-full;
+	@apply rounded-full;
 }
 
 @media (min-width: 768px) {
-  .container {
-    grid-template-columns: 3fr 2fr;
-  }
+	.container {
+		grid-template-columns: 3fr 2fr;
+	}
 }

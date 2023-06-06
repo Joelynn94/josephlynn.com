@@ -1,23 +1,24 @@
 import Image from "next/image";
+import Button from "./button";
 import UserLinks from "./userlinks";
+import buttonStyles from "../styles/button.module.css";
 import heroStyles from "../styles/hero.module.css";
 
 const Hero = ({ config }) => {
 	return (
 		<div className={heroStyles.container}>
 			<div className={heroStyles.content}>
-				<h1 className={heroStyles.heading}>I'm Joseph Lynn</h1>
-				<h2 className={heroStyles.subheading}>
-					Frontend Web Developer
-				</h2>
+				<h1 className={heroStyles.heading}>Joseph Lynn</h1>
+				<h2 className={heroStyles.subheading}>Frontend Developer</h2>
 				<p className={heroStyles.blurb}>
-					Based in Tampa, Florida - I enjoy solving business problems
-					and building web applications that have a great look (UI)
-					and user experience (UX). See what I'm coding on GitHub,
-					view my professional profile on LinkedIn, or check out what
-					I am writing on my blog.
+					I'm looking to expand my network and take on more projects
+					in the Tampa, FL area. I enjoy solving business problems and
+					building web applications that have a great look (UI) and
+					user experience (UX).
 				</p>
-				<UserLinks config={config} />
+				<a href="#contact" className={heroStyles.cta}>
+					Tell me about your project
+				</a>
 			</div>
 			<div className={heroStyles["img-wrapper"]}>
 				<Image
